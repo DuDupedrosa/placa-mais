@@ -1,0 +1,79 @@
+.footer-bg {
+  background-color: #240e46;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.footer-bg-logo {
+  max-width: 250px;
+  align-self: center;
+}
+
+.footer-item-label {
+  display: block;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 20px;
+  display: block;
+  color: #f5f5f5;
+}
+
+.footer-item-value {
+  font-family: Montserrat;
+  color: #f5f5f5;
+  font-size: 20px;
+  font-weight: normal;
+  display: block;
+}
+
+/* cada imagem precisa ter 111px */
+.footer-paymento-container img {
+  max-width: 240px;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.footer-item-links-container {
+  margin-top: 60px;
+}
+
+.footer-item-nav-list li + li {
+  margin-top: 16px;
+}
+
+.footer-end-bg {
+  background-color: #f6851f;
+  height: 94px;
+  display: grid;
+  place-items: center;
+}
+
+.footer-item-nav-list li > a {
+  cursor: pointer;
+}
+
+.footer-end-bg p {
+  color: #f5f5f5;
+  font-size: Montserrat;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+}
+
+@media (max-width: 820px) {
+  .footer-flex {
+    flex-direction: column;
+    gap: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer-end-bg p {
+    font-size: 15px;
+  }
+}

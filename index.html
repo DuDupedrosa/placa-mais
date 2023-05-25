@@ -31,19 +31,19 @@
               <li>
                 <span>Home</span>
               </li>
-              <li>
+              <li onclick="scrollToSection('products')">
                 <span>Produtos</span>
               </li>
-              <li>
+              <li onclick="scrollToSection('about')">
                 <span>Sobre</span>
               </li>
-              <li>
+              <li onclick="scrollToSection('step-by-step')">
                 <span>Passo a passo</span>
               </li>
-              <li>
+              <li onclick="scrollToSection('faq')">
                 <span class="faq">F.a.q</span>
               </li>
-              <li>
+              <li onclick="scrollToSection('contact')">
                 <span>contato</span>
               </li>
             </ul>
@@ -120,7 +120,7 @@
       </section>
       <!-- PRODUTOS -->
       <!-- is necessary use the tag svg, because we need have a control of the svg'colors -->
-      <section class="products-section pl-16 pr-16">
+      <section class="products-section pl-16 pr-16" id="products">
         <div>
           <div class="products-title-container">
             <h2 class="title">Produtos</h2>
@@ -240,7 +240,7 @@
         </div>
       </section>
       <!-- SECTION ABOUT  -->
-      <section class="about-section">
+      <section class="about-section" id="about">
         <div class="about-section-bg-desktop">
           <img src="./assets/icons/bg-section-about.svg" alt="Background" />
         </div>
@@ -322,7 +322,7 @@
         </div>
       </section>
       <!-- step by step -->
-      <section class="pr-16 pl-16 step-by-step-container">
+      <section class="pr-16 pl-16 step-by-step-container" id="step-by-step">
         <div>
           <h2 class="step-by-step-title">Passo a passo</h2>
           <p class="step-by-step-sub-title">
@@ -395,7 +395,7 @@
           </div>
         </div>
       </section>
-      <section class="faq-section-container pl-16 pr-16">
+      <section class="faq-section-container pl-16 pr-16" id="faq">
         <div>
           <h2 class="faq-section-title">f.a.q</h2>
           <span class="faq-section-sub-title">Tire suas dúvidas</span>
@@ -525,6 +525,126 @@
           </div>
         </div>
       </section>
+      <!-- contato -->
+      <section id="contact">
+        <div class="contact-section-container">
+          <div class="contact-section-img-container">
+            <img src="./assets/images/contact-form-2x.jpg" alt="" />
+          </div>
+          <div class="contact-section-content">
+            <h2 class="contact-section-form-title">Contato</h2>
+            <span class="contact-section-form-sub-title"
+              >Formulário de contato</span
+            >
+            <div class="contact-section-form-container">
+              <form class="contact-section-form">
+                <input
+                  type="text"
+                  placeholder="Seu nome"
+                  name="name"
+                  class="contact-section-form-input"
+                />
+                <input
+                  type="email"
+                  placeholder="Insira o seu e-mail"
+                  name="email"
+                  class="contact-section-form-input"
+                />
+                <input
+                  type="tel"
+                  placeholder="Insira o seu telefone"
+                  name="tel"
+                  class="contact-section-form-input"
+                />
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Mensagem"
+                  class="contact-section-form-input contact-section-form-textarea"
+                ></textarea>
+                <button type="submit" class="contact-section-button-submit">
+                  Enviar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer-bg">
+          <div class="footer-flex pl-16 pr-16">
+            <div class="footer-bg-logo">
+              <a href="">
+                <img src="./assets/images/logo-2x.png" alt="Logo" />
+              </a>
+            </div>
+            <div>
+              <div>
+                <span class="footer-item-label">Contato</span>
+                <span class="footer-item-value"
+                  >consultaplacasbradm@gmail.com</span
+                >
+              </div>
+              <div class="footer-item-links-container">
+                <span class="footer-item-label">Links</span>
+                <a href="" class="footer-item-value">Termos de uso</a>
+              </div>
+            </div>
+            <div class="footer-paymento-container">
+              <span class="footer-item-label">Formas de pagamentos</span>
+              <img src="./assets/images/footer-payment-2x.png" alt="" />
+            </div>
+            <div>
+              <span class="footer-item-label">Mapa do site</span>
+              <ul class="footer-item-nav-list">
+                <li>
+                  <a class="footer-item-value" href="/">Home</a>
+                </li>
+                <li>
+                  <a
+                    class="footer-item-value"
+                    onclick="scrollToSection('products')"
+                    >Produtos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-item-value"
+                    onclick="scrollToSection('about')"
+                    >Sobre</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-item-value"
+                    onclick="scrollToSection('step-by-step')"
+                    >Passo a passo</a
+                  >
+                </li>
+                <li>
+                  <a class="footer-item-value" onclick="scrollToSection('faq')"
+                    >F.A.Q</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="footer-item-value"
+                    onclick="scrollToSection('contact')"
+                    >Contato</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-end-bg">
+          <p>
+            © PlacaMais. Todos os direitos reservados - CNPJ 41.407.806/0001-86
+          </p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
@@ -556,4 +676,18 @@
       },
     ],
   });
+
+  function scrollToSection(id) {
+    console.log('%c⧭', 'color: #ff0000', 'chamei');
+    const section = document.getElementById(id);
+
+    // if (!section) {
+    //   window.location.pathname('/');
+    // }
+
+    section.scrollIntoView({
+      block: 'center',
+      behavior: 'smooth',
+    });
+  }
 </script>

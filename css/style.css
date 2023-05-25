@@ -1,6 +1,7 @@
 @import url(./global/reset.css);
 @import url(./global/header.css);
 @import url(./global/utility.css);
+@import url(./global/footer.css);
 @import url(./home/intro.css);
 @import url(./home/product-carousel.css);
 @import url(./home/products.css);
@@ -9,3 +10,4 @@
 @import url(./home/consult-section.css);
 @import url(./home/faq-accordion.css);
 @import url(./home/faq.css);
+@import url(./home/contact.css);
