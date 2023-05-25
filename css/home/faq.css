@@ -1,0 +1,44 @@
+.faq-section-title {
+  font-family: Montserrat;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 54px;
+  color: #f99d1b;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.faq-section-sub-title {
+  font-family: Montserrat;
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 38px;
+  color: #3d246a;
+  display: block;
+  text-transform: uppercase;
+}
+
+.faq-section-container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 769px) {
+  .faq-section-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .faq-section-title {
+    font-size: 15px;
+    line-height: 0;
+    margin-bottom: 24px;
+  }
+
+  .faq-section-sub-title {
+    font-size: 20px;
+    line-height: 0;
+  }
+}

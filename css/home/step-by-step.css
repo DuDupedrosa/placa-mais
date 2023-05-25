@@ -1,0 +1,87 @@
+.step-by-step-title {
+  font-size: 25px;
+  font-family: Montserrat;
+  font-weight: normal;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f99d1b;
+}
+
+.step-by-step-sub-title {
+  font-size: 34px;
+  font-family: Montserrat;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #3d246a;
+  margin-bottom: 37px;
+  text-align: center;
+}
+
+.step-by-step-list {
+  display: flex;
+  align-items: center;
+  gap: 82px;
+  justify-content: center;
+}
+
+.step-by-step-label {
+  font-family: Montserrat;
+  font-size: 19px;
+  font-weight: 400;
+  color: #707070;
+  margin-top: 40px;
+  display: block;
+  text-align: center;
+}
+
+.step-by-step-section-button-to-consult {
+  width: 100%;
+  max-width: 622px;
+  height: 61px;
+  border-radius: 4px;
+  background-color: #f36e21;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: normal;
+  color: #f5f5f5;
+  display: grid;
+  place-items: center;
+  margin-top: 56px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.step-by-step-container {
+  margin-bottom: 120px;
+  margin-top: -60px;
+}
+
+@media (max-width: 769px) {
+  .step-by-step-title {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .step-by-step-sub-title {
+    font-size: 20px;
+    margin-bottom: 17px;
+  }
+
+  .step-by-step-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .step-by-step-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .step-by-step-section-button-to-consult {
+    height: 54px;
+    font-size: 20px;
+    margin-top: 68px;
+  }
+}

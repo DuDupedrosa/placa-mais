@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="393" viewBox="0 0 1920 393">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_341" data-name="Retângulo 341" width="1920" height="393" transform="translate(0 2986)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.792" y2="1.07" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3d246a"/>
+      <stop offset="1" stop-color="#4f3974"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_de_máscara_3" data-name="Grupo de máscara 3" transform="translate(0 -2986)" clip-path="url(#clip-path)">
+    <rect id="Retângulo_336" data-name="Retângulo 336" width="1956.721" height="348.234" transform="matrix(1, 0.017, -0.017, 1, -8.165, 2985.962)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

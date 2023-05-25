@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="430" height="343" viewBox="0 0 430 343">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_341" data-name="Retângulo 341" width="430" height="343" transform="translate(-0.231 -0.011)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.792" y2="1.07" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3d246a"/>
+      <stop offset="1" stop-color="#4f3974"/>
+    </linearGradient>
+  </defs>
+  <g id="bg-chamada" transform="translate(0.231 0.011)" clip-path="url(#clip-path)">
+    <path id="Caminho_296" data-name="Caminho 296" d="M0,0,438.611,22.188l3.949,304.217L3.949,304.217Z" transform="matrix(1, 0.017, -0.017, 1, -1.807, -0.034)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
