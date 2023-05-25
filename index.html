@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- specific css to products'carousel  -->
+    <link
+      rel="stylesheet"
+      href="node_modules/glider-js/glider-product-home.css"
+    />
+
+    <!-- css do projeto -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div>
+      <!-- header -->
+      <header class="header-bg">
+        <div class="header-flex">
+          <!-- logo -->
+          <div>
+            <a href="/">
+              <img src="./assets/images/logo.png" alt="Logo" />
+            </a>
+          </div>
+          <!-- navegação -->
+          <nav>
+            <!-- menu desktop -->
+            <ul class="header-nav-list-flex">
+              <li>
+                <span>Home</span>
+              </li>
+              <li>
+                <span>Produtos</span>
+              </li>
+              <li>
+                <span>Sobre</span>
+              </li>
+              <li>
+                <span>Passo a passo</span>
+              </li>
+              <li>
+                <span class="faq">F.a.q</span>
+              </li>
+              <li>
+                <span>contato</span>
+              </li>
+            </ul>
+            <!-- menu mobile -->
+            <ul class="header-nav-list-mobile">
+              <li>
+                <span>Home</span>
+              </li>
+              <li>
+                <span>Produtos</span>
+              </li>
+              <li>
+                <span>Sobre</span>
+              </li>
+              <li>
+                <span>Passo a passo</span>
+              </li>
+              <li>
+                <span class="faq">F.a.q</span>
+              </li>
+              <li>
+                <span>contato</span>
+              </li>
+            </ul>
+          </nav>
+          <!-- action button -->
+          <div class="header-nav-list-button-consult">
+            <a href="/consulta">Consultar placa</a>
+          </div>
+        </div>
+      </header>
+      <!-- INTRO -->
+      <section class="home-intro">
+        <div class="home-intro-bg-desktop">
+          <img
+            src="./assets/images/bg-home-intro.png"
+            alt=""
+            class="home-intro-bg-img"
+            height="580px"
+            width="100%"
+          />
+        </div>
+        <div class="home-intro-bg-mobile">
+          <img src="./assets/images/bg-intro-home-mobile-3x.png" alt="" />
+        </div>
+        <div class="home-intro-content-bg-car-mobile">
+          <img src="./assets/images/bg-car-intro-mobile-3x.png" alt="" />
+        </div>
+        <div class="home-intro-content-bg-car-desktop">
+          <img src="./assets/images/bg-car-home-intro.png" alt="" />
+        </div>
+        <div>
+          <div class="home-intro-content">
+            <div class="pr-16 pl-16 home-intro-content-container">
+              <h1 class="home-intro-title">
+                Faça agora mesmo uma consulta de veículo pela placa
+              </h1>
+              <p class="home-intro-sub-title">
+                Descubra informações sobre um veículo com apenas a placa!
+              </p>
+              <form class="home-intro-home">
+                <input
+                  class="home-intro-form-input"
+                  type="text"
+                  placeholder="placa"
+                />
+                <button type="submit" class="home-intro-form-button-submit">
+                  Consultar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PRODUTOS -->
+      <!-- is necessary use the tag svg, because we need have a control of the svg'colors -->
+      <section class="products-section pl-16 pr-16">
+        <div>
+          <div class="products-title-container">
+            <h2 class="title">Produtos</h2>
+            <span class="sub-title">Tudo o que você precisa descobrir!</span>
+          </div>
+          <div class="glider-contain product-list-container">
+            <div class="products-list-items-container">
+              <ul class="glider">
+                <li class="product-item" style="width: 10px">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="85.631"
+                    height="64.223"
+                    viewBox="0 0 85.631 64.223"
+                  >
+                    <path
+                      id="Icon_awesome-car"
+                      data-name="Icon awesome-car"
+                      d="M83.622,23.232H73.609l-2.783-6.958A18.637,18.637,0,0,0,53.435,4.5H32.195A18.642,18.642,0,0,0,14.8,16.274L12.02,23.232H2.008A2.006,2.006,0,0,0,.062,25.725l1,4.014a2.006,2.006,0,0,0,1.947,1.52H6.368a10.629,10.629,0,0,0-3.693,8.028v8.028a10.617,10.617,0,0,0,2.676,7.013v9.043A5.353,5.353,0,0,0,10.7,68.723h5.352a5.353,5.353,0,0,0,5.352-5.352V58.019H64.223v5.352a5.353,5.353,0,0,0,5.352,5.352h5.352a5.353,5.353,0,0,0,5.352-5.352V54.328a10.61,10.61,0,0,0,2.676-7.013V39.288a10.633,10.633,0,0,0-3.691-8.028H82.62a2.006,2.006,0,0,0,1.947-1.52l1-4.014a2.008,2.008,0,0,0-1.948-2.494ZM24.741,20.25A8.029,8.029,0,0,1,32.195,15.2h21.24A8.029,8.029,0,0,1,60.89,20.25l3.333,8.334H21.407l3.333-8.334ZM16.055,47.282A5.048,5.048,0,0,1,10.7,41.947a5.048,5.048,0,0,1,5.352-5.335c3.211,0,8.028,4.8,8.028,8S19.267,47.282,16.055,47.282Zm53.519,0c-3.211,0-8.028.534-8.028-2.668s4.817-8,8.028-8a5.048,5.048,0,0,1,5.352,5.335,5.048,5.048,0,0,1-5.352,5.335Z"
+                      transform="translate(0 -4.5)"
+                    />
+                  </svg>
+                  <span class="label">Dados do veículo</span>
+                </li>
+                <li class="product-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="82.313"
+                    height="85.776"
+                    viewBox="0 0 82.313 85.776"
+                  >
+                    <path
+                      id="Icon_map-car-dealer"
+                      data-name="Icon map-car-dealer"
+                      d="M80.977,20.386c-1.18-.93-4.345-1.676-6.715-2.232l-3.206-.429V9.974L72.7,9.948c1.539.781,3.755,2.06,3.87,3.776h6.183c-.115-3.431-2.721-5.6-5.04-7.315-1.539-1.141-3.223-1.75-6.655-2.119V0H67.625V4.158c-3.431.329-4.539,1.184-6.088,2.578A8.752,8.752,0,0,0,58.609,13.6c0,3.019.863,5.237,2.937,6.658,1.16.8,2.649,1.553,6.08,2.246v8.4c-1.716-.3-1.719-.226-2.325-.945-.583-.7-.743-2.512-.942-2.512H58.224c0,3.431.928,5.075,3.251,6.9,1.674,1.319,2.719,1.553,6.15,1.9v3.2h3.431v-3.15c3.431-.331,6.346-1.2,8.022-2.635,2.175-1.858,3.954-4.193,3.954-7,0-2.741-.221-4.834-2.055-6.284ZM65.941,15.606a2.547,2.547,0,0,1-1.383-2.467,3.036,3.036,0,0,1,1.343-2.8c.534-.352.009-.607,1.724-.777v6.759C65.91,16.057,66.318,15.821,65.941,15.606Zm7.451,15.131c-.288.1-2.335.178-2.335.249V23.837c3.431.3,3.167.612,3.736.957a2.641,2.641,0,0,1,1.343,2.362,3.594,3.594,0,0,1-2.745,3.58Zm-8.3,20.729h-.949L53.6,32.38a3.212,3.212,0,0,0-2.544-1.5H19.074a3.212,3.212,0,0,0-2.544,1.5L5.99,51.466H5.043C3.154,51.466.72,53.01.72,54.9V72.052c0,1.887,2.434,3.431,4.323,3.431H7.582V80.63c0,2.831,3.208,5.147,6.039,5.147h1.716c2.831,0,4.254-2.316,4.254-5.147V75.483H48.755V80.63c0,2.831,3.206,5.147,6.039,5.147h1.716c2.831,0,4.255-2.316,4.255-5.147V75.483h4.323c1.887,0,2.539-1.544,2.539-3.431V54.9c0-1.887-.654-3.431-2.539-3.431ZM11.047,65.19A4.289,4.289,0,1,1,15.336,60.9,4.289,4.289,0,0,1,11.047,65.19Zm3.431-13.724,6.953-13.9a3.042,3.042,0,0,1,2.482-1.535h22.3A3.044,3.044,0,0,1,48.7,37.561l6.953,13.9H14.478Zm44.6,13.724A4.289,4.289,0,1,1,63.371,60.9,4.289,4.289,0,0,1,59.082,65.19Z"
+                      transform="translate(-0.72)"
+                    />
+                  </svg>
+
+                  <span class="label"
+                    >Registros em <br />
+                    leilões</span
+                  >
+                </li>
+                <li class="product-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="70.109"
+                    height="70.109"
+                    viewBox="0 0 70.109 70.109"
+                  >
+                    <path
+                      id="Icon_awesome-satellite-dish"
+                      data-name="Icon awesome-satellite-dish"
+                      d="M25.857,47.373l3.752-3.752a4.006,4.006,0,0,0,1.068.219,4.382,4.382,0,1,0-4.382-4.382,4.006,4.006,0,0,0,.219,1.068l-3.752,3.752-16-16a2.172,2.172,0,0,0-3.424.411A28.116,28.116,0,0,0,41.414,66.766a2.157,2.157,0,0,0,.411-3.424ZM28.623,0a2.2,2.2,0,0,0-2.328,2.191V6.521A2.169,2.169,0,0,0,28.349,8.7,35.174,35.174,0,0,1,61.341,41.772a2.188,2.188,0,0,0,2.178,2.054h4.4A2.2,2.2,0,0,0,70.106,41.5,43.93,43.93,0,0,0,28.623,0Zm.041,13.147a2.21,2.21,0,0,0-2.369,2.2v4.4a2.184,2.184,0,0,0,2.027,2.178A21.874,21.874,0,0,1,48.166,41.813a2.2,2.2,0,0,0,2.178,2.013h4.41a2.218,2.218,0,0,0,2.2-2.369A30.814,30.814,0,0,0,28.664,13.149Z"
+                      transform="translate(0 0.002)"
+                    />
+                  </svg>
+                  <span class="label">Roubo ou furto</span>
+                </li>
+                <li class="product-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="80.091"
+                    height="74.371"
+                    viewBox="0 0 80.091 74.371"
+                  >
+                    <g
+                      id="Icon_ionic-ios-create"
+                      data-name="Icon ionic-ios-create"
+                    >
+                      <g
+                        id="Grupo_142"
+                        data-name="Grupo 142"
+                        transform="translate(30.027 0)"
+                      >
+                        <path
+                          id="Caminho_81"
+                          data-name="Caminho 81"
+                          d="M50.578,6.3l-36.1,36.1a1.406,1.406,0,0,0-.411,1v4.736a1.415,1.415,0,0,0,1.412,1.412h4.7a1.447,1.447,0,0,0,1.019-.411l36.122-36.1a1.413,1.413,0,0,0,0-2L52.58,6.3A1.413,1.413,0,0,0,50.578,6.3Z"
+                          transform="translate(-14.063 0.493)"
+                        />
+                        <path
+                          id="Caminho_82"
+                          data-name="Caminho 82"
+                          d="M38.875,6.771,36.3,4.2l-.036-.036a3.16,3.16,0,0,0-2.055-.786,3.1,3.1,0,0,0-2.073.8l-2.02,2.038a.723.723,0,0,0,0,1l1.859,1.859,3.879,3.879a.712.712,0,0,0,1.019,0l2.02-2.02a3.048,3.048,0,0,0,.786-2.073A3.234,3.234,0,0,0,38.875,6.771Z"
+                          transform="translate(10.384 -3.375)"
+                        />
+                      </g>
+                      <path
+                        id="Caminho_83"
+                        data-name="Caminho 83"
+                        d="M41.214,47.824a2.87,2.87,0,0,1-2.02.84h-7.4a2.868,2.868,0,0,1-2.86-2.86V38.387a2.87,2.87,0,0,1,.84-2.02l.143-.143L56.3,9.843a.714.714,0,0,0-.5-1.215H12.742A10.5,10.5,0,0,0,2.25,19.119V59.156A10.5,10.5,0,0,0,12.742,69.647H58.5A10.5,10.5,0,0,0,68.99,59.156V21.8a.71.71,0,0,0-1.215-.5L41.357,47.681Z"
+                        transform="translate(-2.25 4.724)"
+                      />
+                    </g>
+                  </svg>
+                  <span class="label">Indício de sinistro</span>
+                </li>
+              </ul>
+            </div>
+            <button
+              aria-label="Previous"
+              class="glider-prev slide-navegations-buttons"
+            >
+              <
+            </button>
+            <button
+              aria-label="Next"
+              class="glider-next slide-navegations-buttons"
+            >
+              >
+            </button>
+
+            <div role="tablist" class="dots"></div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION ABOUT  -->
+      <section class="about-section">
+        <div class="about-section-bg-desktop">
+          <img src="./assets/icons/bg-section-about.svg" alt="Background" />
+        </div>
+        <div class="about-section-bg-mobile">
+          <img src="./assets/icons/bg-about-mobile.svg" alt="Background" />
+        </div>
+        <div class="about-section-container pl-16">
+          <div class="about-section-flex">
+            <div class="about-section-img-car-container">
+              <img
+                src="./assets/images/car-red-section-about-us-2x.png"
+                alt="Car example"
+              />
+            </div>
+            <div class="about-section-img-car-container-mobile">
+              <img
+                src="./assets/images/carro-mobile@3x.png"
+                alt="Car example"
+              />
+            </div>
+            <div class="about-section-content pr-16">
+              <h2 class="about-section-title">Sobre</h2>
+              <span class="about-section-sub-title">Quem somos nós</span>
+              <p class="about-section-text-intro">
+                O PlacaMais nasceu com o propósito de ser um site de consulta
+                veicular prático e seguro. Somos uma empresa confiável e
+                extraímos os dados atualizados de sites oficiais do governo.
+                Queremos proporcionar ao consumidor uma consulta segura, rápida
+                e detalhada.
+              </p>
+              <ul class="about-section-list">
+                <li>
+                  <div>
+                    <img src="./assets/icons/safe-icon.svg" alt="" />
+                  </div>
+                  <div>
+                    <span class="about-section-list-title"
+                      >Segurança nas consultas</span
+                    >
+                    <span class="about-section-list-sub-title"
+                      >Garantimos uma consulta segura de ponta-a-ponta.</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <img src="./assets/icons/money-circle-icon.svg" alt="" />
+                  </div>
+                  <div>
+                    <span class="about-section-list-title"
+                      >Custo benefício</span
+                    >
+                    <span class="about-section-list-sub-title"
+                      >Escolha qual dos planos de consultas é o que você
+                      precisa.</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <img src="./assets/icons/computer-circle-icon.svg" alt="" />
+                  </div>
+                  <div>
+                    <span class="about-section-list-title">Simplicidade</span>
+                    <span class="about-section-list-sub-title"
+                      >Consultar dados veiculares nunca foi tão fácil. Digite a
+                      placa e o site iniciará a busca.</span
+                    >
+                  </div>
+                </li>
+              </ul>
+              <div>
+                <a href="/" class="about-section-button-to-consult"
+                  >Consultar Placa agora</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+
+<script src="node_modules/glider-js/glider.js"></script>
+
+<script>
+  new Glider(document.querySelector('.glider'), {
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    rewind: true,
+    draggable: true,
+    dots: '.dots',
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next',
+    },
+    responsive: [
+      {
+        // screens greater than >= 775px
+        breakpoint: 779,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2,
+        },
+      },
+    ],
+  });
+</script>

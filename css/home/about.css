@@ -1,0 +1,196 @@
+.about-section {
+  position: relative;
+}
+
+.about-section-container {
+  position: absolute;
+  top: 0;
+}
+
+.about-section-flex {
+  display: flex;
+  gap: 60px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.about-section-title {
+  font-family: Montserrat;
+  font-size: 25px;
+  margin-bottom: 6px;
+  font-weight: normal;
+  color: #f99d1b;
+  text-transform: uppercase;
+}
+
+.about-section-sub-title {
+  color: #3d246a;
+  font-family: Montserrat;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  display: block;
+  font-size: 34px;
+}
+
+.about-section-text-intro {
+  color: #707070;
+  font-family: Montserrat;
+  font-size: 22px;
+  line-height: 27px;
+  max-width: 613px;
+  margin-bottom: 39px;
+}
+
+.about-section-img-car-container {
+  max-width: 822px;
+  margin-top: 120px;
+}
+
+.about-section-list > li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.about-section-list > li span {
+  display: block;
+}
+
+.about-section-list > li + li {
+  margin-top: 49px;
+}
+
+.about-section-list-title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 26px;
+  color: #3d246a;
+  margin-bottom: 2px;
+}
+
+.about-section-list-sub-title {
+  color: #707070;
+  font-size: 19px;
+  font-family: Montserrat;
+  font-weight: normal;
+}
+
+.about-section-button-to-consult {
+  width: 100%;
+  max-width: 622px;
+  height: 61px;
+  border-radius: 4px;
+  background-color: #f36e21;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: normal;
+  color: #f5f5f5;
+  display: grid;
+  place-items: center;
+  margin-top: 65px;
+}
+
+.about-section-content {
+  align-self: center;
+  margin-top: 40px;
+}
+
+.about-section-bg-mobile {
+  display: none;
+}
+
+.about-section-img-car-container-mobile {
+  display: none;
+}
+
+@media (max-width: 769px) {
+  .about-section-img-car-container {
+    display: none;
+  }
+
+  .about-section-img-car-container-mobile {
+    display: initial;
+  }
+
+  .about-section-bg-desktop {
+    display: none;
+  }
+
+  .about-section-bg-mobile {
+    width: 100%;
+    display: initial;
+  }
+
+  .about-section-bg-mobile > img {
+    min-height: 1120px;
+    width: 100%;
+  }
+
+  .about-section-flex {
+    flex-direction: column;
+    gap: 60px;
+    width: initial;
+    min-height: initial;
+  }
+
+  .about-section-title {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .about-section-sub-title {
+    font-size: 20px;
+    margin-bottom: 17px;
+  }
+
+  .about-section-text-intro {
+    font-size: 15px;
+    line-height: 19px;
+    max-width: 100%;
+    margin-bottom: 33px;
+  }
+
+  .about-section-list-title {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .about-section-list-sub-title {
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+  .about-section-img-car-container {
+    margin-top: 0px;
+  }
+
+  .about-section-img-car-container-mobile {
+    margin-top: 40px;
+  }
+
+  .about-section-button-to-consult {
+    font-size: 20px;
+    height: 54px;
+  }
+
+  .about-section-container {
+    padding-left: 20px;
+  }
+
+  .about-section-content {
+    padding-right: 20px;
+  }
+
+  .about-section-content {
+    align-self: flex-start;
+  }
+
+  .about-section-list img {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+}

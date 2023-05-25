@@ -1,0 +1,81 @@
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-bg {
+  background: #240e46;
+  padding: 20px;
+}
+
+.header-nav-list-flex {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.header-nav-list-flex > li > span {
+  display: block;
+  font-family: Segoe UI;
+  font-size: 18px;
+  color: #f5f5f5;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+.header-nav-list-flex > li > span.faq {
+  text-transform: capitalize;
+}
+
+.header-nav-list-button-consult {
+  border-radius: 4px;
+  background: #f36e21;
+  padding: 21px 24px 16px 24px;
+  text-align: center;
+  min-width: 226px;
+  height: 61px;
+}
+
+.header-nav-list-button-consult > a {
+  color: #f5f5f5;
+  font-family: Montserrat;
+}
+
+.header-nav-list-mobile {
+  display: none;
+}
+
+.header-bg {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+/* mobile */
+@media (max-width: 769px) {
+  .header-nav-list-mobile {
+    display: block;
+  }
+
+  .header-nav-list-flex {
+    display: none;
+  }
+
+  .header-nav-list-button-consult {
+    display: none;
+  }
+
+  .header-nav-list-mobile > li > span {
+    display: block;
+    font-family: Segoe UI;
+    font-size: 14px;
+    color: #f5f5f5;
+    text-transform: lowercase;
+    cursor: pointer;
+  }
+
+  .header-bg {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

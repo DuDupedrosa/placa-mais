@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+  <g id="Grupo_146" data-name="Grupo 146" transform="translate(-1002 -1948)">
+    <path id="Icon_open-monitor" data-name="Icon open-monitor" d="M1.238,0A1.821,1.821,0,0,0,0,1.819V20.03A1.821,1.821,0,0,0,1.82,21.851h9.105v3.642H7.284a3.653,3.653,0,0,0-3.642,3.642H25.494a3.653,3.653,0,0,0-3.642-3.642H18.21V21.851h9.105a1.821,1.821,0,0,0,1.821-1.821V1.819A1.821,1.821,0,0,0,27.315,0H1.82a1.821,1.821,0,0,0-.328,0,1.821,1.821,0,0,0-.219,0Zm2.4,3.642H25.494V18.209H3.642Z" transform="translate(1022.433 1968.442)" fill="#f7911d"/>
+    <g id="Elipse_22" data-name="Elipse 22" transform="translate(1002 1948)" fill="none" stroke="#f7911d" stroke-width="1">
+      <circle cx="35" cy="35" r="35" stroke="none"/>
+      <circle cx="35" cy="35" r="34.5" fill="none"/>
+    </g>
+  </g>
+</svg>

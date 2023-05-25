@@ -1,0 +1,124 @@
+.home-intro-title {
+  font-family: Montserrat;
+  font-size: 61px;
+  color: #f99d1b;
+  max-width: 623px;
+  line-height: 61px;
+  margin-bottom: 20px;
+  margin-top: 104px;
+}
+
+.home-intro-sub-title {
+  font-family: Montserrat;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.home-intro-form-input {
+  border-radius: 13px;
+  background: #ffffff;
+  font-family: Segoe UI;
+  font-size: 26px;
+  text-transform: uppercase;
+  padding: 20px;
+  height: 81px;
+  border: none;
+  display: block;
+  color: #707070;
+}
+
+.home-intro-form-button-submit {
+  background-color: #f36e21;
+  border-radius: 13px;
+  font-family: Montserrat;
+  font-size: 20px;
+  color: #f5f5f5;
+  width: 171px;
+  height: 81px;
+  border: none;
+  display: block;
+}
+
+.home-intro-home {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.home-intro {
+  position: relative;
+}
+
+.home-intro-content {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.home-intro-content-bg-car-desktop {
+  position: absolute;
+  top: 0;
+}
+
+.home-intro-bg-mobile {
+  display: none;
+}
+
+.home-intro-content-bg-car-mobile {
+  display: none;
+}
+
+@media (max-width: 769px) {
+  .home-intro-content-bg-car-mobile {
+    display: block;
+  }
+
+  .home-intro-bg-desktop {
+    display: none;
+  }
+
+  .home-intro-bg-mobile {
+    display: block;
+    margin-top: -1px;
+  }
+
+  .home-intro-content-bg-car-desktop {
+    display: none;
+  }
+
+  .home-intro-content-bg-car-desktop {
+    position: absolute;
+  }
+
+  .home-intro-content-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .home-intro-content-bg-car-mobile {
+    position: absolute;
+    top: 380px;
+  }
+
+  .home-intro-title {
+    font-size: 35px;
+    line-height: 35px;
+    margin-top: 60px;
+  }
+
+  .home-intro-form-input {
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 20px;
+    height: 68px;
+    width: 100%;
+  }
+
+  .home-intro-form-button-submit {
+    border-radius: 2px;
+    font-size: 15px;
+    width: 140px;
+    height: 68px;
+  }
+}
