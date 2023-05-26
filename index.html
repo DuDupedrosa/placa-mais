@@ -47,24 +47,52 @@
                 <span>contato</span>
               </li>
             </ul>
+            <!-- buttons menu mobile -->
+            <button
+              onclick="openMenuMobile()"
+              id="menu-mobile-button"
+              class="menu-mobile-button"
+            >
+              <img
+                src="./assets/icons/menu-mobile.svg"
+                alt=""
+                id="icon-menu-open"
+              />
+            </button>
+            <button
+              onclick="closeMenuMobile()"
+              id="menu-mobile-button-close"
+              class="menu-mobile-button-close hidden-menu-mobile-button-close"
+            >
+              <img
+                src="./assets/icons/circle-xmark.svg"
+                id="icon-menu-close"
+                alt=""
+              />
+            </button>
             <!-- menu mobile -->
-            <ul class="header-nav-list-mobile">
+            <ul class="header-nav-list-mobile" id="menu-mobile">
+              <li>
+                <div class="header-nav-list-button-consult-mobile">
+                  <a href="/consulta">Consultar placa</a>
+                </div>
+              </li>
               <li>
                 <span>Home</span>
               </li>
-              <li>
+              <li onclick="scrollToSection('products')">
                 <span>Produtos</span>
               </li>
-              <li>
+              <li onclick="scrollToSection('about')">
                 <span>Sobre</span>
               </li>
-              <li>
+              <li onclick="scrollToSection('step-by-step')">
                 <span>Passo a passo</span>
               </li>
-              <li>
-                <span class="faq">F.a.q</span>
+              <li onclick="scrollToSection('faq')">
+                <span class="faq">F.A.Q</span>
               </li>
-              <li>
+              <li onclick="scrollToSection('contact')">
                 <span>contato</span>
               </li>
             </ul>
@@ -689,5 +717,42 @@
       block: 'center',
       behavior: 'smooth',
     });
+  }
+
+  function openMenuMobile() {
+    console.log('%c⧭', 'color: #733d00', ' chamei em');
+    const menu = document.getElementById('menu-mobile');
+    const menuOpenButton = document.getElementById('menu-mobile-button');
+    const menuCloseButton = document.getElementById('menu-mobile-button-close');
+    const iconMenuMobileOpen = document.getElementById('icon-menu-open');
+    const iconMenuMobileClose = document.getElementById('icon-menu-close');
+    menuOpenButton.classList.add('hidden-menu-mobile-button');
+    menuCloseButton.classList.remove('hidden-menu-mobile-button-close');
+    menu.classList.add('header-nav-list-mobile-open');
+
+    // global event
+    window.addEventListener('click', (e) => {
+      if (
+        e.target !== menu &&
+        e.target !== menuOpenButton &&
+        e.target !== menuCloseButton &&
+        e.target !== iconMenuMobileOpen &&
+        e.target !== iconMenuMobileClose
+      ) {
+        menuOpenButton.classList.remove('hidden-menu-mobile-button');
+        menuCloseButton.classList.add('hidden-menu-mobile-button-close');
+        menu.classList.remove('header-nav-list-mobile-open');
+      }
+    });
+  }
+
+  function closeMenuMobile() {
+    const menu = document.getElementById('menu-mobile');
+    const menuOpenButton = document.getElementById('menu-mobile-button');
+    const menuCloseButton = document.getElementById('menu-mobile-button-close');
+
+    menuOpenButton.classList.remove('hidden-menu-mobile-button');
+    menuCloseButton.classList.add('hidden-menu-mobile-button-close');
+    menu.classList.remove('header-nav-list-mobile-open');
   }
 </script>
