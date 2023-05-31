@@ -26,3 +26,6 @@
 
 /* success payment */
 @import url(./success-payment/success-payment.css);
+
+/* vehicle information */
+@import url(./vehicle-informations/vehicle-informations.css);

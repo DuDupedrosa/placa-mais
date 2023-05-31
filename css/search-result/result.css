@@ -1,5 +1,6 @@
 #result-body {
   background-color: #f5f5f5;
+  margin-top: 160px;
 }
 
 .result-header-buttons-actions {
@@ -270,5 +271,9 @@
     top: -80px;
     left: 0;
     width: 100%;
+  }
+
+  #result-body {
+    margin-top: 158px;
   }
 }

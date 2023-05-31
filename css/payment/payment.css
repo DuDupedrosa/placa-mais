@@ -1,5 +1,6 @@
 #payment-body {
   background-color: #f5f5f5;
+  margin-top: 160px;
 }
 
 .payment-form-label {
@@ -350,5 +351,10 @@
 
   .payment-show-pix-information-desktop {
     display: none;
+  }
+
+  #payment-body {
+    background-color: #f5f5f5;
+    margin-top: 120px;
   }
 }

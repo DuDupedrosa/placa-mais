@@ -5,3 +5,8 @@
 .pl-16 {
   padding-left: 64px;
 }
+
+@font-face {
+  font-family: Segoe UI;
+  src: url('../../fonts/Segoe UI.ttf'), url('../../fonts/Segoe UI Bold.ttf');
+}

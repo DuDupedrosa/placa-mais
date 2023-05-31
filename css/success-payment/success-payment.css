@@ -1,5 +1,6 @@
 #success-payment-body {
   background-color: #f5f5f5;
+  margin-top: 160px;
 }
 
 .success-payment-first-alert {
@@ -251,5 +252,9 @@
 
   .success-payment-section-information > div.content {
     padding: 20px;
+  }
+
+  #success-payment-body {
+    margin-top: 120px;
   }
 }

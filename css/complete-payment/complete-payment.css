@@ -1,5 +1,6 @@
 #complete-payment-body {
   background-color: #f5f5f5;
+  margin-top: 160px;
 }
 
 .complete-payment-pix {
@@ -395,5 +396,9 @@
 
   .complete-payment-end-text {
     display: none;
+  }
+
+  #complete-payment-body {
+    margin-top: 120px;
   }
 }

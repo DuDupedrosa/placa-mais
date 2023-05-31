@@ -16,9 +16,8 @@
 
     <!-- css do projeto -->
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/payment/payment-switch-input.css" />
   </head>
-  <body id="payment-body">
+  <body id="table-result-body">
     <header class="header-bg">
       <div class="header-flex">
         <!-- logo -->
@@ -106,152 +105,39 @@
         </div>
       </div>
     </header>
-    <section class="pl-16 pr-16 payment-content">
-      <div class="payment-container">
-        <!-- primeira coluna -->
-        <div class="payment-section-1">
-          <form class="payment-form-container">
-            <div class="input-box">
-              <label for="documentNumber" class="payment-form-label"
-                >CPF ou CNPJ</label
-              >
-              <input
-                class="payment-form-input"
-                type="text"
-                name="documentNumber"
-                id="documentNumber"
-                placeholder="Insira seu CPF ou CNPJ"
-              />
-            </div>
-            <div class="input-box">
-              <label for="fullName" class="payment-form-label"
-                >Nome completo</label
-              >
-              <input
-                class="payment-form-input"
-                type="text"
-                name="fullName"
-                id="fullName"
-                placeholder="Insira seu nome"
-              />
-            </div>
-            <div class="input-box">
-              <label for="email" class="payment-form-label">Email</label>
-              <input
-                class="payment-form-input"
-                type="text"
-                name="email"
-                id="email"
-                placeholder="Insira seu melhor e-mail"
-              />
-            </div>
-            <div class="input-box">
-              <label for="cellphoneNumber" class="payment-form-label"
-                >Telefone (DDD + Telefone)</label
-              >
-              <input
-                class="payment-form-input"
-                type="text"
-                name="cellphoneNumber"
-                id="cellphoneNumber"
-                placeholder="Insira seu telefone"
-              />
-            </div>
-            <div class="input-box">
-              <div>
-                <label class="payment-form-label payment-receive-report-title"
-                  >Como você quer receber o relatório?</label
-                >
-                <ul class="payment-form-options-send-report-list">
-                  <li>
-                    <label class="switch">
-                      <input type="checkbox" checked />
-                      <span class="slider round"></span>
-                    </label>
-                    <span class="payment-form-label">E-mail</span>
-                  </li>
-                  <li>
-                    <label class="switch">
-                      <input type="checkbox" />
-                      <span class="slider round"></span>
-                    </label>
-                    <span class="payment-form-label">SMS</span>
-                  </li>
-                  <li>
-                    <label class="switch">
-                      <input type="checkbox" />
-                      <span class="slider round"></span>
-                    </label>
-                    <span class="payment-form-label">Whatsapp</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="payment-form-button-submit">
-              <button type="submit">Finalizar pagamento</button>
-            </div>
-          </form>
-        </div>
-        <!-- segunda coluna -->
-        <div class="payment-section-2">
-          <div class="payment-show-information">
-            <span class="title">Pagamento</span>
-            <span class="data-plate">Dados da placa: BIL3236</span>
-            <div class="payment-show-information-total-price">
-              <span class="label">Total:</span>
-              <span class="value">R$ 33,00</span>
-            </div>
-          </div>
-          <div
-            class="payment-show-pix-information payment-show-pix-information-desktop"
-          >
-            <div class="pix-img">
-              <img src="./assets/images/payment-pix-2x.png" alt="Pix" />
-            </div>
-            <p class="pix-text">
-              O pagamento é realizado via PIX de maneira rápida e fácil.
-            </p>
-          </div>
-          <div class="payment-benefits payment-benefits-desktop">
-            <span class="title">O que você recebe?</span>
-            <ul class="payment-benefits-list">
-              <li><span>Relatório em PDF</span></li>
-              <li><span>Link da Consulta</span></li>
-              <li><span>Relatório PDF por e-mail</span></li>
-            </ul>
-          </div>
-        </div>
+    <section class="pl-16 pr-16 table-result-content">
+      <div class="table-result-buttons-container-mobile">
+        <ul class="list">
+          <li>
+            <img src="./assets/icons/arrow-left.svg" alt="" />
+          </li>
+          <li>
+            <img src="./assets/icons/icon-copy.svg" alt="" />
+          </li>
+          <li>
+            <img src="./assets/icons/icon-print.svg" alt="" />
+          </li>
+        </ul>
       </div>
-      <div class="payment-footer">
-        <div class="message-alert">
-          <p>
-            <img src="./assets/icons/info-icon.svg" alt="Info" />
-            Fique tranquilo, seus dados serão utilizados somente para gerar o
-            pagamento, não compartilharemos as suas informações com ninguém.
-          </p>
-        </div>
-        <div
-          class="payment-show-pix-information payment-show-pix-information-mobile"
-        >
-          <div class="pix-img">
-            <img src="./assets/images/payment-pix-2x.png" alt="Pix" />
+      <div class="table-result-container">
+        <div class="header">
+          <span class="title">Informações do veículo</span>
+          <div class="buttons-action-container">
+            <button>
+              <img src="./assets/icons/icon-copy.svg" alt="" />
+              Copiar
+            </button>
+            <button>
+              <img src="./assets/icons/icon-print.svg" alt="" />
+              Imprimir
+            </button>
           </div>
-          <p class="pix-text">
-            O pagamento é realizado via PIX de maneira rápida e fácil.
-          </p>
         </div>
-        <div class="payment-benefits payment-benefits-mobile">
-          <span class="title">O que você recebe?</span>
-          <ul class="payment-benefits-list">
-            <li><span>Relatório em PDF</span></li>
-            <li><span>Link da Consulta</span></li>
-            <li><span>Relatório PDF por e-mail</span></li>
-          </ul>
+        <!-- aqui vem a tabela  -->
+        <!-- <table></table> -->
+        <div style="height: 500px">
+          <h1 style="text-align: center; font-size: 32px">Tabelas!!</h1>
         </div>
-        <p class="footer-end-text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem
-        </p>
       </div>
     </section>
     <footer>
