@@ -2,12 +2,27 @@
 @import url(./global/header.css);
 @import url(./global/utility.css);
 @import url(./global/footer.css);
+@import url(./global/modal-loading.css);
+
+/* home */
 @import url(./home/intro.css);
 @import url(./home/product-carousel.css);
 @import url(./home/products.css);
 @import url(./home/about.css);
 @import url(./home/step-by-step.css);
 @import url(./home/consult-section.css);
-@import url(./home/faq-accordion.css);
 @import url(./home/faq.css);
 @import url(./home/contact.css);
+
+/* result */
+@import url(./search-result/result.css);
+@import url(./search-result/more-informations.css);
+
+/* payment */
+@import url(./payment/payment.css);
+
+/* complete payment */
+@import url(./complete-payment/complete-payment.css);
+
+/* success payment */
+@import url(./success-payment/success-payment.css);

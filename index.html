@@ -16,10 +16,7 @@
 
     <!-- css do projeto -->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css"
-    /> -->
+    <link rel="stylesheet" href="./css/home/faq-accordion.css" />
   </head>
   <body>
     <div>
@@ -146,7 +143,11 @@
                   type="text"
                   placeholder="placa"
                 />
-                <button type="submit" class="home-intro-form-button-submit">
+                <button
+                  type="submit"
+                  id="submit"
+                  class="home-intro-form-button-submit"
+                >
                   Consultar
                 </button>
               </form>
@@ -682,6 +683,13 @@
         </div>
       </footer>
     </div>
+    <!-- modal-loading -->
+    <div class="modal-loading-container" id="modalLoading">
+      <div class="modal-loading-content">
+        <div class="lds-dual-ring"></div>
+        <p>Aguarde estamos carregando suas informações...</p>
+      </div>
+    </div>
   </body>
 </html>
 
@@ -728,7 +736,6 @@
   }
 
   function openMenuMobile() {
-    console.log('%c⧭', 'color: #733d00', ' chamei em');
     const menu = document.getElementById('menu-mobile');
     const menuOpenButton = document.getElementById('menu-mobile-button');
     const menuCloseButton = document.getElementById('menu-mobile-button-close');
@@ -763,4 +770,18 @@
     menuCloseButton.classList.add('hidden-menu-mobile-button-close');
     menu.classList.remove('header-nav-list-mobile-open');
   }
+
+  // submit para buscar uma placa
+  const btn = document.querySelector('#submit');
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const modalLoading = document.getElementById('modalLoading');
+    modalLoading.classList.add('visible');
+
+    setTimeout(() => {
+      modalLoading.classList.remove('visible');
+      window.location.pathname = 'resultado.html';
+    }, [3000]);
+  });
 </script>

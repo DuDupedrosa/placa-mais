@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css do projeto -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body id="success-payment-body">
+    <header class="header-bg">
+      <div class="header-flex">
+        <!-- logo -->
+        <div>
+          <a href="/">
+            <img src="./assets/images/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <!-- navegação -->
+        <nav>
+          <!-- menu desktop -->
+          <ul class="header-nav-list-flex">
+            <li>
+              <span>Home</span>
+            </li>
+            <li onclick="scrollToSection('products')">
+              <span>Produtos</span>
+            </li>
+            <li onclick="scrollToSection('about')">
+              <span>Sobre</span>
+            </li>
+            <li onclick="scrollToSection('step-by-step')">
+              <span>Passo a passo</span>
+            </li>
+            <li onclick="scrollToSection('faq')">
+              <span class="faq">F.a.q</span>
+            </li>
+            <li onclick="scrollToSection('contact')">
+              <span>contato</span>
+            </li>
+          </ul>
+          <!-- buttons menu mobile -->
+          <button
+            onclick="openMenuMobile()"
+            id="menu-mobile-button"
+            class="menu-mobile-button"
+          >
+            <img
+              src="./assets/icons/menu-mobile.svg"
+              alt=""
+              id="icon-menu-open"
+            />
+          </button>
+          <button
+            onclick="closeMenuMobile()"
+            id="menu-mobile-button-close"
+            class="menu-mobile-button-close hidden-menu-mobile-button-close"
+          >
+            <img
+              src="./assets/icons/circle-xmark.svg"
+              id="icon-menu-close"
+              alt=""
+            />
+          </button>
+          <!-- menu mobile -->
+          <ul class="header-nav-list-mobile" id="menu-mobile">
+            <li>
+              <div class="header-nav-list-button-consult-mobile">
+                <a href="/consulta">Consultar placa</a>
+              </div>
+            </li>
+            <li>
+              <span>Home</span>
+            </li>
+            <li onclick="scrollToSection('products')">
+              <span>Produtos</span>
+            </li>
+            <li onclick="scrollToSection('about')">
+              <span>Sobre</span>
+            </li>
+            <li onclick="scrollToSection('step-by-step')">
+              <span>Passo a passo</span>
+            </li>
+            <li onclick="scrollToSection('faq')">
+              <span class="faq">F.A.Q</span>
+            </li>
+            <li onclick="scrollToSection('contact')">
+              <span>contato</span>
+            </li>
+          </ul>
+        </nav>
+        <!-- action button -->
+        <div class="header-nav-list-button-consult">
+          <a href="/consulta">Consultar placa</a>
+        </div>
+      </div>
+    </header>
+    <section class="pl-16 pr-16 success-payment-content">
+      <div class="success-payment-container">
+        <!-- primeira coluna -->
+        <div class="success-payment-section-1">
+          <div class="success-payment-first-alert">
+            <div class="header">
+              <span class="title">Seu pagamento foi finalizado</span>
+            </div>
+            <div class="content">
+              <p class="first-text">
+                O pagamento​ foi efetuado com sucesso, acompanhe aqui a
+                liberação do seu pedido.
+              </p>
+              <p class="second-text">
+                Você receberá informações referentes a placa:
+                <span class="plate">Gii6j98</span>
+              </p>
+              <button class="button-view-informations">
+                Visualizar informações
+              </button>
+            </div>
+          </div>
+          <div class="success-payment-free-informations">
+            <ul class="list">
+              <li class="list-item">
+                <span class="label">Dados do veículo</span>
+                <span class="check">
+                  <div class="check-icon">
+                    <img src="./assets/icons/check-icon-white.svg" alt="" />
+                  </div>
+                </span>
+              </li>
+              <li class="list-item">
+                <span class="label">Proprietário</span>
+                <span class="check">
+                  <div class="check-icon">
+                    <img src="./assets/icons/check-icon-white.svg" alt="" />
+                  </div>
+                </span>
+              </li>
+              <li class="list-item">
+                <span class="label">Renavam</span>
+                <span class="check">
+                  <div class="check-icon">
+                    <img src="./assets/icons/check-icon-white.svg" alt="" />
+                  </div>
+                </span>
+              </li>
+              <li class="list-item">
+                <span class="label">Chassi</span>
+                <span class="check">
+                  <div class="check-icon">
+                    <img src="./assets/icons/check-icon-white.svg" alt="" />
+                  </div>
+                </span>
+              </li>
+              <li class="list-item">
+                <span class="label">Multas</span>
+                <span class="check">
+                  <!-- <div class="check-icon">
+                    <img src="./assets/icons/check-icon-white.svg" alt="" />
+                  </div> -->
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- segunda coluna -->
+        <div class="success-payment-section-2">
+          <div class="success-payment-section-information">
+            <div class="header">
+              <span class="title">Informações</span>
+            </div>
+            <div class="content">
+              <p class="first-text">
+                Seu pagamento <span class="bold">foi confirmado</span> em nosso
+                sistema, agora você pode aguardar estamos buscando as
+                informações referente ao veiculo, quando estiver disponível
+                basta clicar em
+                <span class="bold">visualizar informações</span>, enviaremos um
+                link para informações por <span class="bond">email</span>.
+              </p>
+              <p class="second-text">
+                A liberação das informações pode demorar alguns minutos, por
+                favor verifique seu email e sua caixa de spam, caso demore mais
+                de 30 minutos entre em contato conosco.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-bg">
+        <div class="footer-flex pl-16 pr-16">
+          <div class="footer-bg-logo">
+            <a href="">
+              <img src="./assets/images/logo-2x.png" alt="Logo" />
+            </a>
+          </div>
+          <div>
+            <div>
+              <span class="footer-item-label">Contato</span>
+              <span class="footer-item-value"
+                >consultaplacasbradm@gmail.com</span
+              >
+            </div>
+            <div class="footer-item-links-container">
+              <span class="footer-item-label">Links</span>
+              <a href="" class="footer-item-value">Termos de uso</a>
+            </div>
+          </div>
+          <div class="footer-paymento-container">
+            <span class="footer-item-label">Formas de pagamentos</span>
+            <img src="./assets/images/footer-payment-2x.png" alt="" />
+          </div>
+          <div>
+            <span class="footer-item-label">Mapa do site</span>
+            <ul class="footer-item-nav-list">
+              <li>
+                <a class="footer-item-value" href="/">Home</a>
+              </li>
+              <li>
+                <a
+                  class="footer-item-value"
+                  onclick="scrollToSection('products')"
+                  >Produtos</a
+                >
+              </li>
+              <li>
+                <a class="footer-item-value" onclick="scrollToSection('about')"
+                  >Sobre</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-item-value"
+                  onclick="scrollToSection('step-by-step')"
+                  >Passo a passo</a
+                >
+              </li>
+              <li>
+                <a class="footer-item-value" onclick="scrollToSection('faq')"
+                  >F.A.Q</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="footer-item-value"
+                  onclick="scrollToSection('contact')"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-end-bg">
+        <p>
+          © PlacaMais. Todos os direitos reservados - CNPJ 41.407.806/0001-86
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+
+<script>
+  new Accordion('.accordion-container');
+
+  function scrollToSection(id) {
+    console.log('%c⧭', 'color: #ff0000', 'chamei');
+    const section = document.getElementById(id);
+
+    if (!section) {
+      window.location.pathname = '/';
+    }
+
+    section.scrollIntoView({
+      block: 'center',
+      behavior: 'smooth',
+    });
+  }
+
+  function openMenuMobile() {
+    const menu = document.getElementById('menu-mobile');
+    const menuOpenButton = document.getElementById('menu-mobile-button');
+    const menuCloseButton = document.getElementById('menu-mobile-button-close');
+    const iconMenuMobileOpen = document.getElementById('icon-menu-open');
+    const iconMenuMobileClose = document.getElementById('icon-menu-close');
+    menuOpenButton.classList.add('hidden-menu-mobile-button');
+    menuCloseButton.classList.remove('hidden-menu-mobile-button-close');
+    menu.classList.add('header-nav-list-mobile-open');
+
+    // global event
+    window.addEventListener('click', (e) => {
+      if (
+        e.target !== menu &&
+        e.target !== menuOpenButton &&
+        e.target !== menuCloseButton &&
+        e.target !== iconMenuMobileOpen &&
+        e.target !== iconMenuMobileClose
+      ) {
+        menuOpenButton.classList.remove('hidden-menu-mobile-button');
+        menuCloseButton.classList.add('hidden-menu-mobile-button-close');
+        menu.classList.remove('header-nav-list-mobile-open');
+      }
+    });
+  }
+
+  function closeMenuMobile() {
+    const menu = document.getElementById('menu-mobile');
+    const menuOpenButton = document.getElementById('menu-mobile-button');
+    const menuCloseButton = document.getElementById('menu-mobile-button-close');
+
+    menuOpenButton.classList.remove('hidden-menu-mobile-button');
+    menuCloseButton.classList.add('hidden-menu-mobile-button-close');
+    menu.classList.remove('header-nav-list-mobile-open');
+  }
+</script>

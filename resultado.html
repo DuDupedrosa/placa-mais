@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css do projeto -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./css/search-result/fipe-table-accordion.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/search-result/more-information-switch-input.css"
+    />
+  </head>
+  <body id="result-body">
+    <header class="header-bg">
+      <div class="header-flex">
+        <!-- logo -->
+        <div>
+          <a href="/">
+            <img src="./assets/images/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <!-- navegação -->
+        <nav>
+          <!-- menu desktop -->
+          <ul class="header-nav-list-flex">
+            <li>
+              <span>Home</span>
+            </li>
+            <li onclick="scrollToSection('products')">
+              <span>Produtos</span>
+            </li>
+            <li onclick="scrollToSection('about')">
+              <span>Sobre</span>
+            </li>
+            <li onclick="scrollToSection('step-by-step')">
+              <span>Passo a passo</span>
+            </li>
+            <li onclick="scrollToSection('faq')">
+              <span class="faq">F.a.q</span>
+            </li>
+            <li onclick="scrollToSection('contact')">
+              <span>contato</span>
+            </li>
+          </ul>
+          <!-- buttons menu mobile -->
+          <button
+            onclick="openMenuMobile()"
+            id="menu-mobile-button"
+            class="menu-mobile-button"
+          >
+            <img
+              src="./assets/icons/menu-mobile.svg"
+              alt=""
+              id="icon-menu-open"
+            />
+          </button>
+          <button
+            onclick="closeMenuMobile()"
+            id="menu-mobile-button-close"
+            class="menu-mobile-button-close hidden-menu-mobile-button-close"
+          >
+            <img
+              src="./assets/icons/circle-xmark.svg"
+              id="icon-menu-close"
+              alt=""
+            />
+          </button>
+          <!-- menu mobile -->
+          <ul class="header-nav-list-mobile" id="menu-mobile">
+            <li>
+              <div class="header-nav-list-button-consult-mobile">
+                <a href="/consulta">Consultar placa</a>
+              </div>
+            </li>
+            <li>
+              <span>Home</span>
+            </li>
+            <li onclick="scrollToSection('products')">
+              <span>Produtos</span>
+            </li>
+            <li onclick="scrollToSection('about')">
+              <span>Sobre</span>
+            </li>
+            <li onclick="scrollToSection('step-by-step')">
+              <span>Passo a passo</span>
+            </li>
+            <li onclick="scrollToSection('faq')">
+              <span class="faq">F.A.Q</span>
+            </li>
+            <li onclick="scrollToSection('contact')">
+              <span>contato</span>
+            </li>
+          </ul>
+        </nav>
+        <!-- action button -->
+        <div class="header-nav-list-button-consult">
+          <a href="/consulta">Consultar placa</a>
+        </div>
+      </div>
+    </header>
+    <!-- section of result -->
+    <section class="pl-16 pr-16 result-section-container">
+      <div class="button-all-informations-mobile-container">
+        <button class="button-all-informations-mobile">
+          <img src="./assets/icons/king-best-icon.svg" alt="Icon king" />
+          Liberar informações
+        </button>
+      </div>
+      <!-- buttons-desktop -->
+      <div class="result-header-buttons-actions">
+        <div>
+          <button class="result-header-button result-header-button-new-consult">
+            <img src="./assets/icons/arrow-left.svg" alt="" />
+            Nova consulta
+          </button>
+        </div>
+        <div class="result-header-buttons-flex">
+          <button class="result-header-button result-header-button-copy">
+            <img src="./assets/icons/icon-copy.svg" alt="Icon copy" />
+            Copiar
+          </button>
+          <button class="result-header-button result-header-button-print">
+            <img src="./assets/icons/icon-print.svg" alt="Icon print" />
+            Imprimir
+          </button>
+          <div>
+            <button
+              class="result-header-button result-header-button-unlock-informations"
+            >
+              <img src="./assets/icons/king-best-icon.svg" alt="Icon king" />
+              Desbloquear mais informações
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="result-content-bg">
+        <!-- buttons-mobile -->
+        <div class="result-header-buttons-actions-mobile-container">
+          <ul class="result-header-buttons-actions-mobile-list">
+            <li>
+              <img src="./assets/icons/arrow-left.svg" alt="Icon arrow" />
+            </li>
+            <li>
+              <img src="./assets/icons/icon-copy.svg" alt="Icon copy" />
+            </li>
+            <li>
+              <img src="./assets/icons/icon-print.svg" alt="Icon print" />
+            </li>
+          </ul>
+        </div>
+        <!-- flex -->
+        <div class="resunt-content-container">
+          <!-- aqui primeira coluna -->
+          <div class="result-content-plate-content">
+            <h2 class="result-content-title">Resultado da placa</h2>
+            <div class="result-content-plate-center">
+              <span class="result-content-plate-label">Placa</span>
+              <div class="result-content-plate-container">
+                <span class="result-content-plate-value">BIL-3236</span>
+              </div>
+            </div>
+            <div class="reuslt-content-plate-img">
+              <!-- placa -->
+              <img
+                src="https://fastly.picsum.photos/id/108/432/229.jpg?hmac=aFehR3yp31EOQL5G45Sjtvetou1vcWEYLGsPVFUWiRU"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- aqui segunda coluna -->
+          <div class="result-content-list">
+            <ul>
+              <li>
+                <span class="result-list-item-label">Marca</span>
+                <span class="result-list-item-value">VOYAGE GL</span>
+              </li>
+              <li>
+                <span class="result-list-item-label">Modelo</span>
+                <span class="result-list-item-value">Não encontrado</span>
+              </li>
+              <li>
+                <span class="result-list-item-label">Renavam</span>
+                <span class="result-list-item-value">0060*******</span>
+              </li>
+              <li>
+                <span class="result-list-item-label">Chassi</span>
+                <span class="result-list-item-value">9BWZ*************</span>
+              </li>
+              <li>
+                <span class="result-list-item-label">Ano de fabricação</span>
+                <span class="result-list-item-value">2000</span>
+              </li>
+              <li>
+                <span class="result-list-item-label">Ano do modelo</span>
+                <span class="result-list-item-value">2000</span>
+              </li>
+              <li>
+                <span class="result-list-item-label">Histórico de KM</span>
+                <span class="result-list-item-value">Não encontrado</span>
+              </li>
+              <li>
+                <span class="result-list-item-label">Fotos do veículo</span>
+                <span class="result-list-item-value">Não encontrado</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- tabela-fipe -->
+    <section class="faq-section-container pl-16 pr-16">
+      <div>
+        <span class="table-fipe-title">Tabela Fipe</span>
+      </div>
+      <div class="items-center">
+        <div class="accordion-container">
+          <div class="ac">
+            <h2 class="ac-header">
+              <button type="button" class="ac-trigger">Monza SL/e 2.0</button>
+            </h2>
+            <div class="ac-panel">
+              <ul class="ac-panel-list">
+                <li>
+                  <span class="label">Modelo:</span>
+                  <span class="value">Monza SL/e 2.0</span>
+                </li>
+                <li>
+                  <span class="label">Valor</span>
+                  <span class="value">R$ 11.902,00</span>
+                </li>
+                <li>
+                  <span class="label">Código fipe</span>
+                  <span class="value">0000000</span>
+                </li>
+                <li>
+                  <span class="label">Combustível</span>
+                  <span class="value">Gasolina</span>
+                </li>
+                <li>
+                  <span class="label">Marca</span>
+                  <span class="value">GM-Chevrolet</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="ac">
+            <h2 class="ac-header">
+              <button type="button" class="ac-trigger">Monza SL/e 2.0</button>
+            </h2>
+            <div class="ac-panel">
+              <ul class="ac-panel-list">
+                <li>
+                  <span class="label">Modelo:</span>
+                  <span class="value">Monza SL/e 2.0</span>
+                </li>
+                <li>
+                  <span class="label">Valor</span>
+                  <span class="value">R$ 11.902,00</span>
+                </li>
+                <li>
+                  <span class="label">Código fipe</span>
+                  <span class="value">0000000</span>
+                </li>
+                <li>
+                  <span class="label">Combustível</span>
+                  <span class="value">Gasolina</span>
+                </li>
+                <li>
+                  <span class="label">Marca</span>
+                  <span class="value">GM-Chevrolet</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="ac">
+            <h2 class="ac-header">
+              <button type="button" class="ac-trigger">Monza SL/e 2.0</button>
+            </h2>
+            <div class="ac-panel">
+              <ul class="ac-panel-list">
+                <li>
+                  <span class="label">Modelo:</span>
+                  <span class="value">Monza SL/e 2.0</span>
+                </li>
+                <li>
+                  <span class="label">Valor</span>
+                  <span class="value">R$ 11.902,00</span>
+                </li>
+                <li>
+                  <span class="label">Código fipe</span>
+                  <span class="value">0000000</span>
+                </li>
+                <li>
+                  <span class="label">Combustível</span>
+                  <span class="value">Gasolina</span>
+                </li>
+                <li>
+                  <span class="label">Marca</span>
+                  <span class="value">GM-Chevrolet</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- mais informações-->
+    <section class="pl-16 pr-16 more-information-section">
+      <div class="more-information-flex">
+        <!-- primeira coluca -->
+        <div class="more-information-section-1">
+          <span class="more-information-title">Tenha mais informações</span>
+          <p class="more-information-sub-title">
+            Personalize sua consulta escolhendo uma das opções abaixo, conforme
+            sua nescessidade
+          </p>
+          <ul class="more-information-list">
+            <li>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+              <div>
+                <span class="title"
+                  >Dados do veículo
+
+                  <span class="price">R$ 5,00</span>
+                </span>
+                <span class="sub-title"
+                  >Saiba ano, modelo, cor, chassi, marca
+                </span>
+              </div>
+            </li>
+            <li>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <div>
+                <span class="title"
+                  >Renavam
+
+                  <span class="price">R$ 5,00</span>
+                </span>
+                <span class="sub-title">
+                  Saiba o número de identificação do veiculo consultado.
+                </span>
+              </div>
+            </li>
+            <li>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <div>
+                <span class="title"
+                  >Proprietário
+
+                  <span class="price">R$ 5,00</span>
+                </span>
+                <span class="sub-title"
+                  >Nome do proprietário do veículo e número do CPF parcial
+                </span>
+              </div>
+            </li>
+            <li>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <div>
+                <span class="title"
+                  >Chassi
+                  <span class="price">R$ 5,00</span>
+                </span>
+                <span class="sub-title"
+                  >Saiba sobre o chassi do veículo com informações detalhadas.
+                </span>
+              </div>
+            </li>
+            <li>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <div>
+                <span class="title"
+                  >Multas
+
+                  <span class="price">R$ 5,00</span>
+                </span>
+                <span class="sub-title"
+                  >Infrações do veículo com informações detalhadas.
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- segunda coluna -->
+        <div class="more-information-section-2">
+          <div class="more-information-section-2-header-container">
+            <span class="title">Falta pouco ...</span>
+            <p class="sub-title">
+              Para liberar as informações selecionadas agora mesmo!
+            </p>
+          </div>
+          <div class="more-information-section-2-total-amount-content">
+            <div class="more-information-section-2-total-amount-container">
+              <span class="label">Total:</span>
+              <span class="value">R$ 33,22</span>
+            </div>
+            <div class="more-information-section-2-button-open">
+              <button>
+                <img src="./assets/icons/king-best-icon.svg" alt="" />
+                Desbloquear informações
+              </button>
+            </div>
+            <div class="more-information-section-2-text-help-container-mobile">
+              <p class="more-information-section-2-text-hel-mobile">
+                Pagamento via PIX, liberação e pagamento aprovados na hora,
+                boleto em até 3 dias úteis após o pagamento, sem burocracias.
+              </p>
+            </div>
+          </div>
+          <div class="more-information-section-2-text-help-container">
+            <p class="more-information-section-2-text-help">
+              Pagamento via PIX, liberação e pagamento aprovados na hora, boleto
+              em até 3 dias úteis após o pagamento, sem burocracias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-bg">
+        <div class="footer-flex pl-16 pr-16">
+          <div class="footer-bg-logo">
+            <a href="">
+              <img src="./assets/images/logo-2x.png" alt="Logo" />
+            </a>
+          </div>
+          <div>
+            <div>
+              <span class="footer-item-label">Contato</span>
+              <span class="footer-item-value"
+                >consultaplacasbradm@gmail.com</span
+              >
+            </div>
+            <div class="footer-item-links-container">
+              <span class="footer-item-label">Links</span>
+              <a href="" class="footer-item-value">Termos de uso</a>
+            </div>
+          </div>
+          <div class="footer-paymento-container">
+            <span class="footer-item-label">Formas de pagamentos</span>
+            <img src="./assets/images/footer-payment-2x.png" alt="" />
+          </div>
+          <div>
+            <span class="footer-item-label">Mapa do site</span>
+            <ul class="footer-item-nav-list">
+              <li>
+                <a class="footer-item-value" href="/">Home</a>
+              </li>
+              <li>
+                <a
+                  class="footer-item-value"
+                  onclick="scrollToSection('products')"
+                  >Produtos</a
+                >
+              </li>
+              <li>
+                <a class="footer-item-value" onclick="scrollToSection('about')"
+                  >Sobre</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-item-value"
+                  onclick="scrollToSection('step-by-step')"
+                  >Passo a passo</a
+                >
+              </li>
+              <li>
+                <a class="footer-item-value" onclick="scrollToSection('faq')"
+                  >F.A.Q</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="footer-item-value"
+                  onclick="scrollToSection('contact')"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-end-bg">
+        <p>
+          © PlacaMais. Todos os direitos reservados - CNPJ 41.407.806/0001-86
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+
+<script>
+  new Accordion('.accordion-container');
+
+  function scrollToSection(id) {
+    console.log('%c⧭', 'color: #ff0000', 'chamei');
+    const section = document.getElementById(id);
+
+    if (!section) {
+      window.location.pathname = '/';
+    }
+
+    section.scrollIntoView({
+      block: 'center',
+      behavior: 'smooth',
+    });
+  }
+
+  function openMenuMobile() {
+    const menu = document.getElementById('menu-mobile');
+    const menuOpenButton = document.getElementById('menu-mobile-button');
+    const menuCloseButton = document.getElementById('menu-mobile-button-close');
+    const iconMenuMobileOpen = document.getElementById('icon-menu-open');
+    const iconMenuMobileClose = document.getElementById('icon-menu-close');
+    menuOpenButton.classList.add('hidden-menu-mobile-button');
+    menuCloseButton.classList.remove('hidden-menu-mobile-button-close');
+    menu.classList.add('header-nav-list-mobile-open');
+
+    // global event
+    window.addEventListener('click', (e) => {
+      if (
+        e.target !== menu &&
+        e.target !== menuOpenButton &&
+        e.target !== menuCloseButton &&
+        e.target !== iconMenuMobileOpen &&
+        e.target !== iconMenuMobileClose
+      ) {
+        menuOpenButton.classList.remove('hidden-menu-mobile-button');
+        menuCloseButton.classList.add('hidden-menu-mobile-button-close');
+        menu.classList.remove('header-nav-list-mobile-open');
+      }
+    });
+  }
+
+  function closeMenuMobile() {
+    const menu = document.getElementById('menu-mobile');
+    const menuOpenButton = document.getElementById('menu-mobile-button');
+    const menuCloseButton = document.getElementById('menu-mobile-button-close');
+
+    menuOpenButton.classList.remove('hidden-menu-mobile-button');
+    menuCloseButton.classList.add('hidden-menu-mobile-button-close');
+    menu.classList.remove('header-nav-list-mobile-open');
+  }
+</script>

@@ -10,6 +10,7 @@
 .accordion-container {
   max-width: 1180px;
   margin-top: 42px;
+  width: 100%;
 }
 
 .items-center {
@@ -53,16 +54,6 @@
   transition-timing-function: ease;
 }
 
-.ac .ac-panel .ac-text {
-  color: #023047;
-  font-family: Montserrat;
-  font-size: 18px;
-  line-height: 22px;
-  padding-left: 32px;
-  margin-top: 25px;
-  margin-bottom: 16px;
-}
-
 .ac.js-enabled .ac-panel {
   visibility: hidden;
 }
@@ -73,6 +64,47 @@
 
 .ac.is-active > .ac-header .ac-trigger::after {
   content: url(../../assets/icons/accordion-icon-bottom.svg);
+}
+
+.ac-panel-list > li {
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+  gap: 8px;
+}
+
+.ac-panel-list > li + li {
+  margin-top: 8px;
+}
+
+.ac-panel-list > li > span.label {
+  font-family: Montserrat, sans-serif;
+  font-size: 22px;
+  color: #023047;
+  font-weight: 600;
+}
+
+.ac-panel-list {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.ac-panel-list > li > span.value {
+  font-family: Montserrat, sans-serif;
+  font-size: 22px;
+  color: #023047;
+  font-weight: normal;
+}
+
+.table-fipe-title {
+  font-family: Montserrat;
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 38px;
+  color: #3d246a;
+  display: block;
+  text-transform: uppercase;
 }
 
 @media (max-width: 820px) {

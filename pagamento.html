@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css do projeto -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/payment/payment-switch-input.css" />
+  </head>
+  <body id="payment-body">
+    <header class="header-bg">
+      <div class="header-flex">
+        <!-- logo -->
+        <div>
+          <a href="/">
+            <img src="./assets/images/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <!-- navegação -->
+        <nav>
+          <!-- menu desktop -->
+          <ul class="header-nav-list-flex">
+            <li>
+              <span>Home</span>
+            </li>
+            <li onclick="scrollToSection('products')">
+              <span>Produtos</span>
+            </li>
+            <li onclick="scrollToSection('about')">
+              <span>Sobre</span>
+            </li>
+            <li onclick="scrollToSection('step-by-step')">
+              <span>Passo a passo</span>
+            </li>
+            <li onclick="scrollToSection('faq')">
+              <span class="faq">F.a.q</span>
+            </li>
+            <li onclick="scrollToSection('contact')">
+              <span>contato</span>
+            </li>
+          </ul>
+          <!-- buttons menu mobile -->
+          <button
+            onclick="openMenuMobile()"
+            id="menu-mobile-button"
+            class="menu-mobile-button"
+          >
+            <img
+              src="./assets/icons/menu-mobile.svg"
+              alt=""
+              id="icon-menu-open"
+            />
+          </button>
+          <button
+            onclick="closeMenuMobile()"
+            id="menu-mobile-button-close"
+            class="menu-mobile-button-close hidden-menu-mobile-button-close"
+          >
+            <img
+              src="./assets/icons/circle-xmark.svg"
+              id="icon-menu-close"
+              alt=""
+            />
+          </button>
+          <!-- menu mobile -->
+          <ul class="header-nav-list-mobile" id="menu-mobile">
+            <li>
+              <div class="header-nav-list-button-consult-mobile">
+                <a href="/consulta">Consultar placa</a>
+              </div>
+            </li>
+            <li>
+              <span>Home</span>
+            </li>
+            <li onclick="scrollToSection('products')">
+              <span>Produtos</span>
+            </li>
+            <li onclick="scrollToSection('about')">
+              <span>Sobre</span>
+            </li>
+            <li onclick="scrollToSection('step-by-step')">
+              <span>Passo a passo</span>
+            </li>
+            <li onclick="scrollToSection('faq')">
+              <span class="faq">F.A.Q</span>
+            </li>
+            <li onclick="scrollToSection('contact')">
+              <span>contato</span>
+            </li>
+          </ul>
+        </nav>
+        <!-- action button -->
+        <div class="header-nav-list-button-consult">
+          <a href="/consulta">Consultar placa</a>
+        </div>
+      </div>
+    </header>
+    <section class="pl-16 pr-16 payment-content">
+      <div class="payment-container">
+        <!-- primeira coluna -->
+        <div class="payment-section-1">
+          <form class="payment-form-container">
+            <div class="input-box">
+              <label for="documentNumber" class="payment-form-label"
+                >CPF ou CNPJ</label
+              >
+              <input
+                class="payment-form-input"
+                type="text"
+                name="documentNumber"
+                id="documentNumber"
+                placeholder="Insira seu CPF ou CNPJ"
+              />
+            </div>
+            <div class="input-box">
+              <label for="fullName" class="payment-form-label"
+                >Nome completo</label
+              >
+              <input
+                class="payment-form-input"
+                type="text"
+                name="fullName"
+                id="fullName"
+                placeholder="Insira seu nome"
+              />
+            </div>
+            <div class="input-box">
+              <label for="email" class="payment-form-label">Email</label>
+              <input
+                class="payment-form-input"
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Insira seu melhor e-mail"
+              />
+            </div>
+            <div class="input-box">
+              <label for="cellphoneNumber" class="payment-form-label"
+                >Telefone (DDD + Telefone)</label
+              >
+              <input
+                class="payment-form-input"
+                type="text"
+                name="cellphoneNumber"
+                id="cellphoneNumber"
+                placeholder="Insira seu telefone"
+              />
+            </div>
+            <div class="input-box">
+              <div>
+                <label class="payment-form-label payment-receive-report-title"
+                  >Como você quer receber o relatório?</label
+                >
+                <ul class="payment-form-options-send-report-list">
+                  <li>
+                    <label class="switch">
+                      <input type="checkbox" checked />
+                      <span class="slider round"></span>
+                    </label>
+                    <span class="payment-form-label">E-mail</span>
+                  </li>
+                  <li>
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="slider round"></span>
+                    </label>
+                    <span class="payment-form-label">SMS</span>
+                  </li>
+                  <li>
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="slider round"></span>
+                    </label>
+                    <span class="payment-form-label">Whatsapp</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="payment-form-button-submit">
+              <button type="submit">Finalizar pagamento</button>
+            </div>
+          </form>
+        </div>
+        <!-- segunda coluna -->
+        <div class="payment-section-2">
+          <div class="payment-show-information">
+            <span class="title">Pagamento</span>
+            <span class="data-plate">Dados da placa: BIL3236</span>
+            <div class="payment-show-information-total-price">
+              <span class="label">Total:</span>
+              <span class="value">R$ 33,00</span>
+            </div>
+          </div>
+          <div
+            class="payment-show-pix-information payment-show-pix-information-desktop"
+          >
+            <div class="pix-img">
+              <img src="./assets/images/payment-pix-2x.png" alt="Pix" />
+            </div>
+            <p class="pix-text">
+              O pagamento é realizado via PIX de maneira rápida e fácil.
+            </p>
+          </div>
+          <div class="payment-benefits payment-benefits-desktop">
+            <span class="title">O que você recebe?</span>
+            <ul class="payment-benefits-list">
+              <li><span>Relatório em PDF</span></li>
+              <li><span>Link da Consulta</span></li>
+              <li><span>Relatório PDF por e-mail</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="payment-footer">
+        <div class="message-alert">
+          <p>
+            <img src="./assets/icons/info-icon.svg" alt="Info" />
+            Fique tranquilo, seus dados serão utilizados somente para gerar o
+            pagamento, não compartilharemos as suas informações com ninguém.
+          </p>
+        </div>
+        <div
+          class="payment-show-pix-information payment-show-pix-information-mobile"
+        >
+          <div class="pix-img">
+            <img src="./assets/images/payment-pix-2x.png" alt="Pix" />
+          </div>
+          <p class="pix-text">
+            O pagamento é realizado via PIX de maneira rápida e fácil.
+          </p>
+        </div>
+        <div class="payment-benefits payment-benefits-mobile">
+          <span class="title">O que você recebe?</span>
+          <ul class="payment-benefits-list">
+            <li><span>Relatório em PDF</span></li>
+            <li><span>Link da Consulta</span></li>
+            <li><span>Relatório PDF por e-mail</span></li>
+          </ul>
+        </div>
+        <p class="footer-end-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-bg">
+        <div class="footer-flex pl-16 pr-16">
+          <div class="footer-bg-logo">
+            <a href="">
+              <img src="./assets/images/logo-2x.png" alt="Logo" />
+            </a>
+          </div>
+          <div>
+            <div>
+              <span class="footer-item-label">Contato</span>
+              <span class="footer-item-value"
+                >consultaplacasbradm@gmail.com</span
+              >
+            </div>
+            <div class="footer-item-links-container">
+              <span class="footer-item-label">Links</span>
+              <a href="" class="footer-item-value">Termos de uso</a>
+            </div>
+          </div>
+          <div class="footer-paymento-container">
+            <span class="footer-item-label">Formas de pagamentos</span>
+            <img src="./assets/images/footer-payment-2x.png" alt="" />
+          </div>
+          <div>
+            <span class="footer-item-label">Mapa do site</span>
+            <ul class="footer-item-nav-list">
+              <li>
+                <a class="footer-item-value" href="/">Home</a>
+              </li>
+              <li>
+                <a
+                  class="footer-item-value"
+                  onclick="scrollToSection('products')"
+                  >Produtos</a
+                >
+              </li>
+              <li>
+                <a class="footer-item-value" onclick="scrollToSection('about')"
+                  >Sobre</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-item-value"
+                  onclick="scrollToSection('step-by-step')"
+                  >Passo a passo</a
+                >
+              </li>
+              <li>
+                <a class="footer-item-value" onclick="scrollToSection('faq')"
+                  >F.A.Q</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="footer-item-value"
+                  onclick="scrollToSection('contact')"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-end-bg">
+        <p>
+          © PlacaMais. Todos os direitos reservados - CNPJ 41.407.806/0001-86
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+
+<script>
+  new Accordion('.accordion-container');
+
+  function scrollToSection(id) {
+    console.log('%c⧭', 'color: #ff0000', 'chamei');
+    const section = document.getElementById(id);
+
+    if (!section) {
+      window.location.pathname = '/';
+    }
+
+    section.scrollIntoView({
+      block: 'center',
+      behavior: 'smooth',
+    });
+  }
+
+  function openMenuMobile() {
+    const menu = document.getElementById('menu-mobile');
+    const menuOpenButton = document.getElementById('menu-mobile-button');
+    const menuCloseButton = document.getElementById('menu-mobile-button-close');
+    const iconMenuMobileOpen = document.getElementById('icon-menu-open');
+    const iconMenuMobileClose = document.getElementById('icon-menu-close');
+    menuOpenButton.classList.add('hidden-menu-mobile-button');
+    menuCloseButton.classList.remove('hidden-menu-mobile-button-close');
+    menu.classList.add('header-nav-list-mobile-open');
+
+    // global event
+    window.addEventListener('click', (e) => {
+      if (
+        e.target !== menu &&
+        e.target !== menuOpenButton &&
+        e.target !== menuCloseButton &&
+        e.target !== iconMenuMobileOpen &&
+        e.target !== iconMenuMobileClose
+      ) {
+        menuOpenButton.classList.remove('hidden-menu-mobile-button');
+        menuCloseButton.classList.add('hidden-menu-mobile-button-close');
+        menu.classList.remove('header-nav-list-mobile-open');
+      }
+    });
+  }
+
+  function closeMenuMobile() {
+    const menu = document.getElementById('menu-mobile');
+    const menuOpenButton = document.getElementById('menu-mobile-button');
+    const menuCloseButton = document.getElementById('menu-mobile-button-close');
+
+    menuOpenButton.classList.remove('hidden-menu-mobile-button');
+    menuCloseButton.classList.add('hidden-menu-mobile-button-close');
+    menu.classList.remove('header-nav-list-mobile-open');
+  }
+</script>

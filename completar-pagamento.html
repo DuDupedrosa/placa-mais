@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css do projeto -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body id="complete-payment-body">
+    <header class="header-bg">
+      <div class="header-flex">
+        <!-- logo -->
+        <div>
+          <a href="/">
+            <img src="./assets/images/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <!-- navegação -->
+        <nav>
+          <!-- menu desktop -->
+          <ul class="header-nav-list-flex">
+            <li>
+              <span>Home</span>
+            </li>
+            <li onclick="scrollToSection('products')">
+              <span>Produtos</span>
+            </li>
+            <li onclick="scrollToSection('about')">
+              <span>Sobre</span>
+            </li>
+            <li onclick="scrollToSection('step-by-step')">
+              <span>Passo a passo</span>
+            </li>
+            <li onclick="scrollToSection('faq')">
+              <span class="faq">F.a.q</span>
+            </li>
+            <li onclick="scrollToSection('contact')">
+              <span>contato</span>
+            </li>
+          </ul>
+          <!-- buttons menu mobile -->
+          <button
+            onclick="openMenuMobile()"
+            id="menu-mobile-button"
+            class="menu-mobile-button"
+          >
+            <img
+              src="./assets/icons/menu-mobile.svg"
+              alt=""
+              id="icon-menu-open"
+            />
+          </button>
+          <button
+            onclick="closeMenuMobile()"
+            id="menu-mobile-button-close"
+            class="menu-mobile-button-close hidden-menu-mobile-button-close"
+          >
+            <img
+              src="./assets/icons/circle-xmark.svg"
+              id="icon-menu-close"
+              alt=""
+            />
+          </button>
+          <!-- menu mobile -->
+          <ul class="header-nav-list-mobile" id="menu-mobile">
+            <li>
+              <div class="header-nav-list-button-consult-mobile">
+                <a href="/consulta">Consultar placa</a>
+              </div>
+            </li>
+            <li>
+              <span>Home</span>
+            </li>
+            <li onclick="scrollToSection('products')">
+              <span>Produtos</span>
+            </li>
+            <li onclick="scrollToSection('about')">
+              <span>Sobre</span>
+            </li>
+            <li onclick="scrollToSection('step-by-step')">
+              <span>Passo a passo</span>
+            </li>
+            <li onclick="scrollToSection('faq')">
+              <span class="faq">F.A.Q</span>
+            </li>
+            <li onclick="scrollToSection('contact')">
+              <span>contato</span>
+            </li>
+          </ul>
+        </nav>
+        <!-- action button -->
+        <div class="header-nav-list-button-consult">
+          <a href="/consulta">Consultar placa</a>
+        </div>
+      </div>
+    </header>
+    <section class="pl-16 pr-16 complete-payment-content">
+      <div class="complete-payment-container">
+        <!-- coluna-1 -->
+        <div class="complete-payment-section-1">
+          <div class="complete-payment-pix">
+            <div>
+              <span class="title">Falta pouco ...</span>
+              <p class="text-callback">
+                Aponte o seu celular para a tela para pagar usando o Qr code ou
+                copie o código PIX de pagamento.
+              </p>
+              <button class="button-copy-pix">PIX copia e cola</button>
+            </div>
+            <div class="pix-qr-code-container">
+              <img
+                src="./assets/images/qr-code-example.png"
+                alt="pix-qr-code"
+              />
+            </div>
+          </div>
+          <div
+            class="complete-payment-show-total complete-payment-show-total-mobile"
+          >
+            <div class="header">
+              <span class="label">Valor:</span>
+              <span class="price">R$ 33,32</span>
+            </div>
+            <div class="footer">
+              <p>
+                Você receberá informações referente a placa:
+                <span class="plate">BIL2635</span>
+              </p>
+            </div>
+          </div>
+          <div class="complete-payment-video-example">
+            <span class="title">Veja como é fácil</span>
+            <div class="video-example-container">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/8wFYdA-x8J8?start=3"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="complete-payment-alert-message-container">
+            <div>
+              <img src="./assets/icons/info-icon.svg" alt="" />
+            </div>
+            <p class="message">
+              Após o pagamento,
+              <span class="bold">não é necessário atualizar a página</span> ,
+              aguarde que o sistema tem um tempo para redirecionar para a página
+              das informações.
+            </p>
+          </div>
+        </div>
+        <!-- coluna-2 -->
+        <div class="complete-payment-section-2">
+          <div
+            class="complete-payment-show-total complete-payment-show-total-desktop"
+          >
+            <div class="header">
+              <span class="label">Valor:</span>
+              <span class="price">R$ 33,32</span>
+            </div>
+            <div class="footer">
+              <p>
+                Você receberá informações referente a placa:
+                <span class="plate">BIL2635</span>
+              </p>
+            </div>
+          </div>
+          <div class="complete-payment-time-pix">
+            <span class="title">PIX válido por:</span>
+            <p class="text">
+              <span>
+                01
+                <span class="time-label">Hora</span>
+              </span>
+              <span>
+                56
+                <span class="time-label">Minutos</span>
+              </span>
+              <span>
+                01
+                <span class="time-label">Segundos</span>
+              </span>
+            </p>
+          </div>
+          <div class="complete-payment-benefits">
+            <span class="title">Você receberá:</span>
+            <ul class="list">
+              <li>
+                <div class="icon">
+                  <img src="./assets/icons/check-icon-white.svg" alt="" />
+                </div>
+                <div>
+                  <span class="title">Dados do veículo</span>
+                  <span class="text"
+                    >Saiba ano, modelo, cor, chassi, marca
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <img src="./assets/icons/check-icon-white.svg" alt="" />
+                </div>
+                <div>
+                  <span class="title">Proprietário</span>
+                  <span class="text"
+                    >Nome do proprietário do veículo e número do CPF parcial
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <img src="./assets/icons/check-icon-white.svg" alt="" />
+                </div>
+                <div>
+                  <span class="title">Renavam</span>
+                  <span class="text">
+                    Saiba o número de identificação do veiculo consultado.
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <img src="./assets/icons/check-icon-white.svg" alt="" />
+                </div>
+                <div>
+                  <span class="title">Chassi</span>
+                  <span class="text">
+                    Saiba sobre o chassi do veículo com informações detalhadas.
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="complete-payment-end-text">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem
+      </p>
+    </section>
+    <footer>
+      <div class="footer-bg">
+        <div class="footer-flex pl-16 pr-16">
+          <div class="footer-bg-logo">
+            <a href="">
+              <img src="./assets/images/logo-2x.png" alt="Logo" />
+            </a>
+          </div>
+          <div>
+            <div>
+              <span class="footer-item-label">Contato</span>
+              <span class="footer-item-value"
+                >consultaplacasbradm@gmail.com</span
+              >
+            </div>
+            <div class="footer-item-links-container">
+              <span class="footer-item-label">Links</span>
+              <a href="" class="footer-item-value">Termos de uso</a>
+            </div>
+          </div>
+          <div class="footer-paymento-container">
+            <span class="footer-item-label">Formas de pagamentos</span>
+            <img src="./assets/images/footer-payment-2x.png" alt="" />
+          </div>
+          <div>
+            <span class="footer-item-label">Mapa do site</span>
+            <ul class="footer-item-nav-list">
+              <li>
+                <a class="footer-item-value" href="/">Home</a>
+              </li>
+              <li>
+                <a
+                  class="footer-item-value"
+                  onclick="scrollToSection('products')"
+                  >Produtos</a
+                >
+              </li>
+              <li>
+                <a class="footer-item-value" onclick="scrollToSection('about')"
+                  >Sobre</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-item-value"
+                  onclick="scrollToSection('step-by-step')"
+                  >Passo a passo</a
+                >
+              </li>
+              <li>
+                <a class="footer-item-value" onclick="scrollToSection('faq')"
+                  >F.A.Q</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="footer-item-value"
+                  onclick="scrollToSection('contact')"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-end-bg">
+        <p>
+          © PlacaMais. Todos os direitos reservados - CNPJ 41.407.806/0001-86
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+
+<script>
+  new Accordion('.accordion-container');
+
+  function scrollToSection(id) {
+    console.log('%c⧭', 'color: #ff0000', 'chamei');
+    const section = document.getElementById(id);
+
+    if (!section) {
+      window.location.pathname = '/';
+    }
+
+    section.scrollIntoView({
+      block: 'center',
+      behavior: 'smooth',
+    });
+  }
+
+  function openMenuMobile() {
+    const menu = document.getElementById('menu-mobile');
+    const menuOpenButton = document.getElementById('menu-mobile-button');
+    const menuCloseButton = document.getElementById('menu-mobile-button-close');
+    const iconMenuMobileOpen = document.getElementById('icon-menu-open');
+    const iconMenuMobileClose = document.getElementById('icon-menu-close');
+    menuOpenButton.classList.add('hidden-menu-mobile-button');
+    menuCloseButton.classList.remove('hidden-menu-mobile-button-close');
+    menu.classList.add('header-nav-list-mobile-open');
+
+    // global event
+    window.addEventListener('click', (e) => {
+      if (
+        e.target !== menu &&
+        e.target !== menuOpenButton &&
+        e.target !== menuCloseButton &&
+        e.target !== iconMenuMobileOpen &&
+        e.target !== iconMenuMobileClose
+      ) {
+        menuOpenButton.classList.remove('hidden-menu-mobile-button');
+        menuCloseButton.classList.add('hidden-menu-mobile-button-close');
+        menu.classList.remove('header-nav-list-mobile-open');
+      }
+    });
+  }
+
+  function closeMenuMobile() {
+    const menu = document.getElementById('menu-mobile');
+    const menuOpenButton = document.getElementById('menu-mobile-button');
+    const menuCloseButton = document.getElementById('menu-mobile-button-close');
+
+    menuOpenButton.classList.remove('hidden-menu-mobile-button');
+    menuCloseButton.classList.add('hidden-menu-mobile-button-close');
+    menu.classList.remove('header-nav-list-mobile-open');
+  }
+</script>
