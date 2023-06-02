@@ -6,6 +6,11 @@
   line-height: 61px;
   margin-bottom: 20px;
   margin-top: 104px;
+  font-weight: 600;
+}
+
+.home-intro-bg-desktop img {
+  height: 760px;
 }
 
 .home-intro-sub-title {
@@ -53,13 +58,13 @@
 
 .home-intro-content {
   position: absolute;
-  top: 0;
+  top: 140px;
   z-index: 1;
 }
 
 .home-intro-content-bg-car-desktop {
   position: absolute;
-  top: 0;
+  top: 140px;
 }
 
 .home-intro-bg-mobile {
