@@ -168,6 +168,16 @@
   margin-bottom: 72px;
 }
 
+@media (min-width: 821px) and (max-width: 1220px) {
+  .success-payment-container {
+    flex-wrap: wrap;
+  }
+
+  .success-payment-section-information > div.content > p {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 820px) {
   .success-payment-container {
     flex-direction: column;

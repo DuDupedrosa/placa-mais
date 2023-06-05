@@ -37,6 +37,31 @@
   display: none;
 }
 
+@media (min-width: 821px) and (max-width: 1220px) {
+  .consult-section-container {
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .consult-section-bg-desktop {
+    display: none;
+  }
+
+  .consult-section-bg-mobile {
+    display: initial;
+    width: 100%;
+  }
+
+  .consult-section-bg-mobile img {
+    width: 100%;
+  }
+}
+
 @media (max-width: 820px) {
   .consult-section-container {
     align-items: center;

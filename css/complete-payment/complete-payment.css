@@ -223,6 +223,7 @@
 
 .complete-payment-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 100px;
 }
 
@@ -237,6 +238,7 @@
 .complete-payment-content {
   margin-top: 60px;
   margin-bottom: 32px;
+  padding-bottom: 40px;
 }
 
 .video-example-container {
@@ -260,6 +262,12 @@
 
 .video-example-container iframe {
   max-width: 100%;
+}
+
+@media (max-width: 1220px) {
+  .complete-payment-container {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 820px) {

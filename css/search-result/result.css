@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 24px;
   margin-bottom: 40px;
 }
@@ -51,6 +52,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .result-section-container {
@@ -179,6 +181,12 @@
 
 .button-all-informations-mobile-container {
   display: none;
+}
+
+@media (min-width: 821px) and (max-width: 1220px) {
+  .result-content-plate-value {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 820px) {

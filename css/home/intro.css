@@ -10,7 +10,7 @@
 }
 
 .home-intro-bg-desktop img {
-  height: 760px;
+  height: 820px;
 }
 
 .home-intro-sub-title {
@@ -58,13 +58,20 @@
 
 .home-intro-content {
   position: absolute;
-  top: 140px;
+  top: 160px;
   z-index: 1;
+  display: flex;
+  gap: 64px;
+  height: 84%;
+}
+
+.home-intro-content-car-img-container {
+  align-self: center;
 }
 
 .home-intro-content-bg-car-desktop {
   position: absolute;
-  top: 140px;
+  top: 160px;
 }
 
 .home-intro-bg-mobile {
@@ -75,9 +82,13 @@
   display: none;
 }
 
-@media (max-width: 820px) {
+@media (min-width: 821px) and (max-width: 1220px) {
   .home-intro-content-bg-car-mobile {
     display: block;
+  }
+
+  .home-intro-content-car-img-container {
+    display: none;
   }
 
   .home-intro-bg-desktop {
@@ -87,6 +98,58 @@
   .home-intro-bg-mobile {
     display: block;
     margin-top: -1px;
+  }
+
+  .home-intro-bg-mobile > img {
+    max-height: 1220px;
+    width: 100%;
+  }
+
+  .home-intro-content-bg-car-desktop {
+    display: none;
+  }
+
+  .home-intro-content-bg-car-desktop {
+    position: absolute;
+  }
+
+  .home-intro-content-bg-car-mobile {
+    position: absolute;
+    bottom: 60px;
+  }
+
+  .home-intro-content {
+    top: 60px;
+    height: initial;
+  }
+
+  .home-intro-content-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 820px) {
+  .home-intro-content-bg-car-mobile {
+    display: block;
+  }
+
+  .home-intro-content-car-img-container {
+    display: none;
+  }
+
+  .home-intro-bg-desktop {
+    display: none;
+  }
+
+  .home-intro-bg-mobile {
+    display: block;
+    margin-top: -1px;
+  }
+
+  .home-intro-bg-mobile > img {
+    min-height: 780px;
+    width: 100%;
   }
 
   .home-intro-content-bg-car-desktop {
@@ -104,7 +167,7 @@
 
   .home-intro-content-bg-car-mobile {
     position: absolute;
-    top: 380px;
+    bottom: 60px;
   }
 
   .home-intro-title {
@@ -126,5 +189,10 @@
     font-size: 15px;
     width: 140px;
     height: 68px;
+  }
+
+  .home-intro-content {
+    top: 60px;
+    height: initial;
   }
 }

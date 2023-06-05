@@ -42,10 +42,10 @@
 }
 
 .product-item > svg {
-  fill: #8559a5;
+  fill: #3d246a;
   margin: 0 auto;
   width: 100%;
-  opacity: 0.55;
+  opacity: 1;
 }
 
 .product-item:hover > svg {

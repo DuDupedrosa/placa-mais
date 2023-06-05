@@ -42,7 +42,7 @@
 
 .ac .ac-trigger::after {
   transition: 0.4s;
-  content: url(../../assets/icons/accordion-icon-top.svg);
+  content: url(../../assets/icons/accordion-icon-bottom.svg);
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   margin-top: 16px;
@@ -63,7 +63,7 @@
 }
 
 .ac.is-active > .ac-header .ac-trigger::after {
-  content: url(../../assets/icons/accordion-icon-bottom.svg);
+  content: url(../../assets/icons/accordion-icon-top.svg);
 }
 
 .ac-panel-list > li {
@@ -94,6 +94,10 @@
   font-size: 22px;
   color: #023047;
   font-weight: normal;
+}
+
+.ac-panel-list > li > span.value-bold {
+  font-weight: 600;
 }
 
 .table-fipe-title {

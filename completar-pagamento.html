@@ -185,15 +185,15 @@
             <span class="title">PIX válido por:</span>
             <p class="text">
               <span>
-                01
-                <span class="time-label">Hora</span>
+                <span id="hours">00</span>
+                <span class="time-label">Hora(s)</span>
               </span>
               <span>
-                56
+                <span id="minutes">00</span>
                 <span class="time-label">Minutos</span>
               </span>
               <span>
-                01
+                <span id="seconds">00</span>
                 <span class="time-label">Segundos</span>
               </span>
             </p>
@@ -249,10 +249,6 @@
           </div>
         </div>
       </div>
-      <p class="complete-payment-end-text">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem
-      </p>
     </section>
     <footer>
       <div class="footer-bg">
@@ -261,62 +257,72 @@
             <a href="">
               <img src="./assets/images/logo-2x.png" alt="Logo" />
             </a>
+            <p class="footer-item-value footer-text-logo">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+              dicta laborum quaerat repellendus tempora deserunt nobis. Error
+              deserunt veniam ad libero eos culpa esse dolor quos fugiat
+              similique? Odio, aut?
+            </p>
           </div>
-          <div>
+          <div class="footer-flex-2">
             <div>
-              <span class="footer-item-label">Contato</span>
-              <span class="footer-item-value"
-                >consultaplacasbradm@gmail.com</span
-              >
+              <div>
+                <span class="footer-item-label">Contato</span>
+                <span class="footer-item-value"
+                  >consultaplacasbradm@gmail.com</span
+                >
+              </div>
+              <div class="footer-item-links-container">
+                <span class="footer-item-label">Links</span>
+                <a href="" class="footer-item-value">Termos de uso</a>
+              </div>
             </div>
-            <div class="footer-item-links-container">
-              <span class="footer-item-label">Links</span>
-              <a href="" class="footer-item-value">Termos de uso</a>
+            <div class="footer-paymento-container">
+              <span class="footer-item-label">Formas de pagamentos</span>
+              <img src="./assets/images/footer-payment-2x.png" alt="" />
             </div>
-          </div>
-          <div class="footer-paymento-container">
-            <span class="footer-item-label">Formas de pagamentos</span>
-            <img src="./assets/images/footer-payment-2x.png" alt="" />
-          </div>
-          <div>
-            <span class="footer-item-label">Mapa do site</span>
-            <ul class="footer-item-nav-list">
-              <li>
-                <a class="footer-item-value" href="/">Home</a>
-              </li>
-              <li>
-                <a
-                  class="footer-item-value"
-                  onclick="scrollToSection('products')"
-                  >Produtos</a
-                >
-              </li>
-              <li>
-                <a class="footer-item-value" onclick="scrollToSection('about')"
-                  >Sobre</a
-                >
-              </li>
-              <li>
-                <a
-                  class="footer-item-value"
-                  onclick="scrollToSection('step-by-step')"
-                  >Passo a passo</a
-                >
-              </li>
-              <li>
-                <a class="footer-item-value" onclick="scrollToSection('faq')"
-                  >F.A.Q</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
-                  class="footer-item-value"
-                  onclick="scrollToSection('contact')"
-                  >Contato</a
-                >
-              </li>
-            </ul>
+            <div>
+              <span class="footer-item-label">Mapa do site</span>
+              <ul class="footer-item-nav-list">
+                <li>
+                  <a class="footer-item-value" href="/">Home</a>
+                </li>
+                <li>
+                  <a
+                    class="footer-item-value"
+                    onclick="scrollToSection('products')"
+                    >Produtos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-item-value"
+                    onclick="scrollToSection('about')"
+                    >Sobre</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-item-value"
+                    onclick="scrollToSection('step-by-step')"
+                    >Passo a passo</a
+                  >
+                </li>
+                <li>
+                  <a class="footer-item-value" onclick="scrollToSection('faq')"
+                    >F.A.Q</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="footer-item-value"
+                    onclick="scrollToSection('contact')"
+                    >Contato</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -382,5 +388,68 @@
     menuOpenButton.classList.remove('hidden-menu-mobile-button');
     menuCloseButton.classList.add('hidden-menu-mobile-button-close');
     menu.classList.remove('header-nav-list-mobile-open');
+  }
+</script>
+
+<script>
+  let hoursElement = document.getElementById('hours');
+  let minutesElement = document.getElementById('minutes');
+  let secondsElement = document.getElementById('seconds');
+  let timer;
+
+  window.onload = function () {
+    //⚠️ para definir o tempo do cronometro é só passar os valores nas variáveis em seguida!!!!!!
+    let hours = 2;
+    let minutes = 0;
+    let seconds = 0;
+
+    hoursElement.textContent = formatTime(hours);
+    minutesElement.textContent = formatTime(minutes);
+    secondsElement.textContent = formatTime(seconds);
+
+    startTimer(hours, minutes, seconds);
+  };
+
+  function startTimer(hours, minutes, seconds) {
+    timer = setInterval(function () {
+      // Verifica se o tempo chegou a zero
+      if (hours === 0 && minutes === 0 && seconds === 0) {
+        clearInterval(timer);
+        timer = null;
+        return;
+      }
+
+      // Decrementa o tempo
+      seconds--;
+      if (seconds < 0) {
+        seconds = 59;
+        minutes--;
+        if (minutes < 0) {
+          minutes = 59;
+          hours--;
+        }
+      }
+
+      hoursElement.textContent = formatTime(hours);
+      minutesElement.textContent = formatTime(minutes);
+      secondsElement.textContent = formatTime(seconds);
+    }, 1000);
+  }
+
+  function pause() {
+    clearInterval(timer);
+    timer = null;
+  }
+
+  function reset() {
+    clearInterval(timer);
+    timer = null;
+    hoursElement.textContent = '00';
+    minutesElement.textContent = '00';
+    secondsElement.textContent = '00';
+  }
+
+  function formatTime(time) {
+    return time < 10 ? '0' + time : time;
   }
 </script>

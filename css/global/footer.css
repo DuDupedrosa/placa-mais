@@ -6,14 +6,13 @@
 
 .footer-bg-logo {
   max-width: 250px;
-  align-self: center;
 }
 
 .footer-item-label {
   display: block;
   font-family: Montserrat;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 20px;
   margin-bottom: 20px;
   display: block;
   color: #f5f5f5;
@@ -22,7 +21,7 @@
 .footer-item-value {
   font-family: Montserrat;
   color: #f5f5f5;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: normal;
   display: block;
 }
@@ -32,10 +31,15 @@
   max-width: 240px;
 }
 
+.footer-text-logo {
+  text-align: center;
+  margin-top: 20px;
+}
+
 .footer-flex {
   display: flex;
+  gap: 120px;
   justify-content: center;
-  gap: 100px;
 }
 
 .footer-item-links-container {
@@ -59,10 +63,22 @@
 
 .footer-end-bg p {
   color: #f5f5f5;
-  font-size: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 20px;
   font-weight: normal;
   text-align: center;
+}
+
+.footer-flex-2 {
+  display: flex;
+  gap: 60px;
+}
+
+@media (min-width: 821px) and (max-width: 1220px) {
+  .footer-flex {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 820px) {
@@ -75,5 +91,13 @@
 
   .footer-end-bg p {
     font-size: 15px;
+  }
+
+  .footer-flex-2 {
+    flex-direction: column;
+  }
+
+  .footer-text-logo {
+    text-align: start;
   }
 }
