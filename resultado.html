@@ -29,7 +29,7 @@
     <header class="header-bg">
       <div class="header-flex">
         <!-- logo -->
-        <div>
+        <div class="header-logo-container">
           <a href="/">
             <img src="./assets/images/logo.png" alt="Logo" />
           </a>
@@ -116,7 +116,9 @@
     <!-- section of result -->
     <section class="pl-16 pr-16 result-section-container">
       <div class="button-all-informations-mobile-container">
-        <button class="button-all-informations-mobile">
+        <button
+          class="button-all-informations-mobile call-action-show-informations"
+        >
           <img src="./assets/icons/king-best-icon.svg" alt="Icon king" />
           Liberar informações
         </button>
@@ -140,7 +142,7 @@
           </button>
           <div>
             <button
-              class="result-header-button result-header-button-unlock-informations"
+              class="result-header-button result-header-button-unlock-informations call-action-show-informations"
             >
               <img src="./assets/icons/king-best-icon.svg" alt="Icon king" />
               Desbloquear mais informações
@@ -319,7 +321,10 @@
       </div>
     </section>
     <!-- mais informações-->
-    <section class="pl-16 pr-16 more-information-section">
+    <section
+      class="pl-16 pr-16 more-information-section"
+      id="show-more-information-section"
+    >
       <div class="more-information-flex">
         <!-- primeira coluna -->
         <div class="more-information-section-1">
@@ -424,7 +429,7 @@
               <span class="value">R$ 33,22</span>
             </div>
             <div class="more-information-section-2-button-open">
-              <button>
+              <button id="open-more-information-submit">
                 <img src="./assets/icons/king-best-icon.svg" alt="" />
                 Desbloquear informações
               </button>
@@ -449,8 +454,8 @@
       <div class="footer-bg">
         <div class="footer-flex pl-16 pr-16">
           <div class="footer-bg-logo">
-            <a href="">
-              <img src="./assets/images/logo-2x.png" alt="Logo" />
+            <a href="/">
+              <img src="./assets/images/logo.png" alt="Logo" />
             </a>
             <p class="footer-item-value footer-text-logo">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
@@ -527,16 +532,24 @@
         </p>
       </div>
     </footer>
+    <!-- modal-loading -->
+    <div class="modal-loading-container" id="modalLoading">
+      <div class="modal-loading-content">
+        <div class="lds-dual-ring"></div>
+        <p>Aguarde estamos carregando suas informações...</p>
+      </div>
+    </div>
   </body>
 </html>
 
 <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+<script src="./js/menu-mobile.js"></script>
+<script src="./js/result-script.js"></script>
 
 <script>
   new Accordion('.accordion-container');
 
   function scrollToSection(id) {
-    console.log('%c⧭', 'color: #ff0000', 'chamei');
     const section = document.getElementById(id);
 
     if (!section) {
@@ -547,41 +560,5 @@
       block: 'center',
       behavior: 'smooth',
     });
-  }
-
-  function openMenuMobile() {
-    const menu = document.getElementById('menu-mobile');
-    const menuOpenButton = document.getElementById('menu-mobile-button');
-    const menuCloseButton = document.getElementById('menu-mobile-button-close');
-    const iconMenuMobileOpen = document.getElementById('icon-menu-open');
-    const iconMenuMobileClose = document.getElementById('icon-menu-close');
-    menuOpenButton.classList.add('hidden-menu-mobile-button');
-    menuCloseButton.classList.remove('hidden-menu-mobile-button-close');
-    menu.classList.add('header-nav-list-mobile-open');
-
-    // global event
-    window.addEventListener('click', (e) => {
-      if (
-        e.target !== menu &&
-        e.target !== menuOpenButton &&
-        e.target !== menuCloseButton &&
-        e.target !== iconMenuMobileOpen &&
-        e.target !== iconMenuMobileClose
-      ) {
-        menuOpenButton.classList.remove('hidden-menu-mobile-button');
-        menuCloseButton.classList.add('hidden-menu-mobile-button-close');
-        menu.classList.remove('header-nav-list-mobile-open');
-      }
-    });
-  }
-
-  function closeMenuMobile() {
-    const menu = document.getElementById('menu-mobile');
-    const menuOpenButton = document.getElementById('menu-mobile-button');
-    const menuCloseButton = document.getElementById('menu-mobile-button-close');
-
-    menuOpenButton.classList.remove('hidden-menu-mobile-button');
-    menuCloseButton.classList.add('hidden-menu-mobile-button-close');
-    menu.classList.remove('header-nav-list-mobile-open');
   }
 </script>

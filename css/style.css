@@ -3,6 +3,8 @@
 @import url(./global/utility.css);
 @import url(./global/footer.css);
 @import url(./global/modal-loading.css);
+@import url(./global/modal-success.css);
+@import url(./global/modal-error.css);
 
 /* home */
 @import url(./home/intro.css);

@@ -13,6 +13,10 @@
   top: 0;
 }
 
+.header-logo-container {
+  max-width: 231px;
+}
+
 .header-nav-list-flex {
   display: flex;
   align-items: center;

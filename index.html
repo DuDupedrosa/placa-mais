@@ -30,7 +30,7 @@
       <header class="header-bg">
         <div class="header-flex">
           <!-- logo -->
-          <div>
+          <div class="header-logo-container">
             <a href="/">
               <img src="./assets/images/logo.png" alt="Logo" />
             </a>
@@ -142,14 +142,15 @@
               </p>
               <form class="home-intro-home">
                 <input
-                  class="home-intro-form-input"
+                  id="plate"
+                  class="home-intro-form-input plate"
                   type="text"
                   placeholder="placa"
                 />
                 <button
                   type="submit"
                   id="submit"
-                  class="home-intro-form-button-submit"
+                  class="home-intro-form-button-submit submit"
                 >
                   Consultar
                 </button>
@@ -284,9 +285,6 @@
       </section>
       <!-- SECTION ABOUT  -->
       <section class="about-section" id="about">
-        <div class="about-section-bg-desktop">
-          <img src="./assets/icons/bg-section-about.svg" alt="Background" />
-        </div>
         <div class="about-section-bg-mobile">
           <img src="./assets/icons/bg-about-mobile.svg" alt="Background" />
         </div>
@@ -424,13 +422,13 @@
           <div>
             <form class="home-intro-home">
               <input
-                class="home-intro-form-input consult-section-input"
+                class="home-intro-form-input consult-section-input plate"
                 type="text"
                 placeholder="placa"
               />
               <button
                 type="submit"
-                class="home-intro-form-button-submit consult-section-button-submit"
+                class="home-intro-form-button-submit consult-section-button-submit submit"
               >
                 Consultar
               </button>
@@ -580,20 +578,23 @@
               >Formulário de contato</span
             >
             <div class="contact-section-form-container">
-              <form class="contact-section-form">
+              <form class="contact-section-form" id="form-contact">
                 <input
+                  required
                   type="text"
                   placeholder="Seu nome"
                   name="name"
                   class="contact-section-form-input"
                 />
                 <input
+                  required
                   type="email"
                   placeholder="Insira o seu e-mail"
                   name="email"
                   class="contact-section-form-input"
                 />
                 <input
+                  required
                   type="tel"
                   placeholder="Insira o seu telefone"
                   name="tel"
@@ -601,12 +602,16 @@
                   id="cellphoneNumber"
                 />
                 <textarea
+                  required
                   name="message"
                   id="message"
                   placeholder="Mensagem"
                   class="contact-section-form-input contact-section-form-textarea"
                 ></textarea>
-                <button type="submit" class="contact-section-button-submit">
+                <button
+                  type="submit"
+                  class="contact-section-button-submit submit-contact"
+                >
                   Enviar
                 </button>
               </form>
@@ -620,7 +625,7 @@
           <div class="footer-flex pl-16 pr-16">
             <div class="footer-bg-logo">
               <a href="">
-                <img src="./assets/images/logo-2x.png" alt="Logo" />
+                <img src="./assets/images/logo.png" alt="Logo" />
               </a>
               <p class="footer-item-value footer-text-logo">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
@@ -707,11 +712,52 @@
         <p>Aguarde estamos carregando suas informações...</p>
       </div>
     </div>
+    <!-- modal de sucesso -->
+    <div class="modal-success-container" id="modalSuccess">
+      <div class="modal-success-content">
+        <div class="icon-close-modal-container close-modal-success">
+          <img src="./assets/icons/xmark-solid.svg" alt="" />
+        </div>
+        <div class="icon-success-container">
+          <img src="./assets/icons/check-icon-white.svg" alt="" />
+        </div>
+        <p>Mensagem enviada com sucesso!</p>
+        <p class="message-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+          obcaecati esse repellat aperiam! Odit adipisci placeat eaque amet
+          quam.
+        </p>
+
+        <button class="button-close-modal close-modal-success">Fechar</button>
+      </div>
+    </div>
+    <!-- modal de erro -->
+    <div class="modal-error-container" id="modalError">
+      <div class="modal-error-content">
+        <div class="icon-close-modal-container close-modal-error">
+          <img src="./assets/icons/xmark-solid.svg" alt="" />
+        </div>
+        <div class="icon-error-container">
+          <img src="./assets/icons/xmark-solid.svg" alt="" />
+        </div>
+        <p>Ops! Parece que ocorreu um erro</p>
+        <p class="message-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+          obcaecati esse repellat aperiam! Odit adipisci placeat eaque amet
+          quam.
+        </p>
+
+        <button class="button-close-modal close-modal-error">Fechar</button>
+      </div>
+    </div>
+    <!-- moda l erro -->
   </body>
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+<script src="./js/home-script.js"></script>
+<script src="./js/menu-mobile.js"></script>
 
 <script>
   new Accordion('.accordion-container');
@@ -737,74 +783,14 @@
       },
     ],
   });
-
-  function scrollToSection(id) {
-    console.log('%c⧭', 'color: #ff0000', 'chamei');
-    const section = document.getElementById(id);
-
-    // if (!section) {
-    //   window.location.pathname('/');
-    // }
-
-    section.scrollIntoView({
-      block: 'center',
-      behavior: 'smooth',
-    });
-  }
-
-  function openMenuMobile() {
-    const menu = document.getElementById('menu-mobile');
-    const menuOpenButton = document.getElementById('menu-mobile-button');
-    const menuCloseButton = document.getElementById('menu-mobile-button-close');
-    const iconMenuMobileOpen = document.getElementById('icon-menu-open');
-    const iconMenuMobileClose = document.getElementById('icon-menu-close');
-    menuOpenButton.classList.add('hidden-menu-mobile-button');
-    menuCloseButton.classList.remove('hidden-menu-mobile-button-close');
-    menu.classList.add('header-nav-list-mobile-open');
-
-    // global event
-    window.addEventListener('click', (e) => {
-      if (
-        e.target !== menu &&
-        e.target !== menuOpenButton &&
-        e.target !== menuCloseButton &&
-        e.target !== iconMenuMobileOpen &&
-        e.target !== iconMenuMobileClose
-      ) {
-        menuOpenButton.classList.remove('hidden-menu-mobile-button');
-        menuCloseButton.classList.add('hidden-menu-mobile-button-close');
-        menu.classList.remove('header-nav-list-mobile-open');
-      }
-    });
-  }
-
-  function closeMenuMobile() {
-    const menu = document.getElementById('menu-mobile');
-    const menuOpenButton = document.getElementById('menu-mobile-button');
-    const menuCloseButton = document.getElementById('menu-mobile-button-close');
-
-    menuOpenButton.classList.remove('hidden-menu-mobile-button');
-    menuCloseButton.classList.add('hidden-menu-mobile-button-close');
-    menu.classList.remove('header-nav-list-mobile-open');
-  }
-
-  // submit para buscar uma placa
-  const btn = document.querySelector('#submit');
-  btn.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const modalLoading = document.getElementById('modalLoading');
-    modalLoading.classList.add('visible');
-
-    setTimeout(() => {
-      modalLoading.classList.remove('visible');
-      window.location.pathname = 'resultado.html';
-    }, [3000]);
-  });
 </script>
 
 <script>
   $(document).ready(function () {
     $('#cellphoneNumber').mask('(00) 00000-0000');
+  });
+
+  $(document).ready(function () {
+    $('.plate').mask('AAA-9999');
   });
 </script>

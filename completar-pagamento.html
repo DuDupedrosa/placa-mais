@@ -21,7 +21,7 @@
     <header class="header-bg">
       <div class="header-flex">
         <!-- logo -->
-        <div>
+        <div class="header-logo-container">
           <a href="/">
             <img src="./assets/images/logo.png" alt="Logo" />
           </a>
@@ -254,8 +254,8 @@
       <div class="footer-bg">
         <div class="footer-flex pl-16 pr-16">
           <div class="footer-bg-logo">
-            <a href="">
-              <img src="./assets/images/logo-2x.png" alt="Logo" />
+            <a href="/">
+              <img src="./assets/images/logo.png" alt="Logo" />
             </a>
             <p class="footer-item-value footer-text-logo">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
@@ -336,6 +336,8 @@
 </html>
 
 <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+<script src="./js/menu-mobile.js"></script>
+<script src="./js/complete-payment-script.js"></script>
 
 <script>
   new Accordion('.accordion-container');
@@ -352,104 +354,5 @@
       block: 'center',
       behavior: 'smooth',
     });
-  }
-
-  function openMenuMobile() {
-    const menu = document.getElementById('menu-mobile');
-    const menuOpenButton = document.getElementById('menu-mobile-button');
-    const menuCloseButton = document.getElementById('menu-mobile-button-close');
-    const iconMenuMobileOpen = document.getElementById('icon-menu-open');
-    const iconMenuMobileClose = document.getElementById('icon-menu-close');
-    menuOpenButton.classList.add('hidden-menu-mobile-button');
-    menuCloseButton.classList.remove('hidden-menu-mobile-button-close');
-    menu.classList.add('header-nav-list-mobile-open');
-
-    // global event
-    window.addEventListener('click', (e) => {
-      if (
-        e.target !== menu &&
-        e.target !== menuOpenButton &&
-        e.target !== menuCloseButton &&
-        e.target !== iconMenuMobileOpen &&
-        e.target !== iconMenuMobileClose
-      ) {
-        menuOpenButton.classList.remove('hidden-menu-mobile-button');
-        menuCloseButton.classList.add('hidden-menu-mobile-button-close');
-        menu.classList.remove('header-nav-list-mobile-open');
-      }
-    });
-  }
-
-  function closeMenuMobile() {
-    const menu = document.getElementById('menu-mobile');
-    const menuOpenButton = document.getElementById('menu-mobile-button');
-    const menuCloseButton = document.getElementById('menu-mobile-button-close');
-
-    menuOpenButton.classList.remove('hidden-menu-mobile-button');
-    menuCloseButton.classList.add('hidden-menu-mobile-button-close');
-    menu.classList.remove('header-nav-list-mobile-open');
-  }
-</script>
-
-<script>
-  let hoursElement = document.getElementById('hours');
-  let minutesElement = document.getElementById('minutes');
-  let secondsElement = document.getElementById('seconds');
-  let timer;
-
-  window.onload = function () {
-    //⚠️ para definir o tempo do cronometro é só passar os valores nas variáveis em seguida!!!!!!
-    let hours = 2;
-    let minutes = 0;
-    let seconds = 0;
-
-    hoursElement.textContent = formatTime(hours);
-    minutesElement.textContent = formatTime(minutes);
-    secondsElement.textContent = formatTime(seconds);
-
-    startTimer(hours, minutes, seconds);
-  };
-
-  function startTimer(hours, minutes, seconds) {
-    timer = setInterval(function () {
-      // Verifica se o tempo chegou a zero
-      if (hours === 0 && minutes === 0 && seconds === 0) {
-        clearInterval(timer);
-        timer = null;
-        return;
-      }
-
-      // Decrementa o tempo
-      seconds--;
-      if (seconds < 0) {
-        seconds = 59;
-        minutes--;
-        if (minutes < 0) {
-          minutes = 59;
-          hours--;
-        }
-      }
-
-      hoursElement.textContent = formatTime(hours);
-      minutesElement.textContent = formatTime(minutes);
-      secondsElement.textContent = formatTime(seconds);
-    }, 1000);
-  }
-
-  function pause() {
-    clearInterval(timer);
-    timer = null;
-  }
-
-  function reset() {
-    clearInterval(timer);
-    timer = null;
-    hoursElement.textContent = '00';
-    minutesElement.textContent = '00';
-    secondsElement.textContent = '00';
-  }
-
-  function formatTime(time) {
-    return time < 10 ? '0' + time : time;
   }
 </script>
