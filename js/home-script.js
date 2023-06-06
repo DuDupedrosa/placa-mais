@@ -24,10 +24,10 @@ function handleSubmit(e) {
 }
 
 // submit para buscar uma placa
-const btn = document.querySelectorAll('.submit');
+const submitConsultPlate = document.querySelectorAll('.submit');
 
-btn.forEach((button) => {
-  button.addEventListener('click', handleSubmit);
+submitConsultPlate.forEach((button) => {
+  button.addEventListener('submit', handleSubmit);
 });
 
 function handleSubmitContact(e) {

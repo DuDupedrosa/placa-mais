@@ -140,8 +140,9 @@
               <p class="home-intro-sub-title">
                 Descubra informações sobre um veículo com apenas a placa!
               </p>
-              <form class="home-intro-home">
+              <form class="home-intro-home submit">
                 <input
+                  required
                   id="plate"
                   class="home-intro-form-input plate"
                   type="text"
@@ -150,7 +151,7 @@
                 <button
                   type="submit"
                   id="submit"
-                  class="home-intro-form-button-submit submit"
+                  class="home-intro-form-button-submit"
                 >
                   Consultar
                 </button>
@@ -420,15 +421,16 @@
             >
           </div>
           <div>
-            <form class="home-intro-home">
+            <form class="home-intro-home submit">
               <input
+                required
                 class="home-intro-form-input consult-section-input plate"
                 type="text"
                 placeholder="placa"
               />
               <button
                 type="submit"
-                class="home-intro-form-button-submit consult-section-button-submit submit"
+                class="home-intro-form-button-submit consult-section-button-submit"
               >
                 Consultar
               </button>

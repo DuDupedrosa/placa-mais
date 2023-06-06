@@ -171,13 +171,15 @@
   margin-top: 16px;
 }
 
-.payment-benefits-list > li > span::before {
-  content: '';
-  display: inline-block;
-  width: 11px;
-  height: 11px;
-  background-color: #ffb703;
+.payment-benefits-list > li > div.icon {
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
+  background-color: #32bc69;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .payment-container {
@@ -227,6 +229,12 @@
 .payment-benefits-mobile {
   display: none;
   margin-top: 20px;
+}
+
+.payment-benefits-list > li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
 }
 
 @media (max-width: 1220px) {

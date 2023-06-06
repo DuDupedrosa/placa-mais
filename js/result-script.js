@@ -26,3 +26,8 @@ function handleSearchMoreInformation() {
 
 const buttonSubmit = document.getElementById('open-more-information-submit');
 buttonSubmit.addEventListener('click', handleSearchMoreInformation);
+
+const returnHomeButton = document.getElementById('return-home');
+returnHomeButton.addEventListener('click', () => {
+  window.location.pathname = '/';
+});
