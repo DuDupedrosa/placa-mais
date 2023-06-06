@@ -43,12 +43,14 @@
   text-align: center;
   min-width: 226px;
   height: 61px;
+  cursor: pointer;
 }
 
 .header-nav-list-button-consult-mobile {
   border-radius: 4px;
   background: #f36e21;
   padding: 8px;
+  cursor: pointer;
 }
 
 .header-nav-list-button-consult-mobile > a {

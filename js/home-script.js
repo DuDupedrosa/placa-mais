@@ -64,3 +64,10 @@ const buttonCloseModalError = document.querySelectorAll('.close-modal-error');
 buttonCloseModalError.forEach((button) => {
   button.addEventListener('click', handleCloseModalError);
 });
+
+const buttonsGoConsultPlate = document.querySelectorAll('.consult-plate');
+buttonsGoConsultPlate.forEach((button) => {
+  button.addEventListener('click', () => {
+    scrollToSection('consult-plate-section');
+  });
+});

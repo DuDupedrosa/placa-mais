@@ -92,6 +92,7 @@
   display: grid;
   place-items: center;
   margin-top: 65px;
+  cursor: pointer;
 }
 
 .about-section-content {
