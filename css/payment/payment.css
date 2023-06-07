@@ -237,15 +237,141 @@
   gap: 8px;
 }
 
+.payment-form-input-radio {
+  width: 100%;
+  background-color: #f5f5f5;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 98px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+}
+
+.payment-form-input-radio-label {
+  color: #240e46;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  display: block;
+  margin-left: 20px;
+}
+
+.payment-form-input-radio > div.img-container {
+  max-width: 135px;
+}
+
+.payment-form-input-radio-item {
+  display: flex;
+  align-items: center;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.radio-container > div.container {
+  display: flex;
+  align-items: center;
+}
+
+.custom-radio {
+  border: 1px solid #fb8500;
+  width: 27px;
+  height: 27px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-radio,
+span {
+  transition: 0.5s ease;
+}
+
+.custom-radio span {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  border-radius: 50%;
+}
+
+input[type='radio']:checked + .custom-radio {
+  border-color: #fb8500;
+}
+
+input[type='radio']:checked + .custom-radio span {
+  background: #fb8500;
+}
+
+.payment-form-options-container > label + label {
+  margin-top: 12px;
+}
+
+.payment-form-options-container {
+  border-top: 2px solid #f2f2f2;
+  margin-top: 42px;
+}
+
+.payment-form-options-title {
+  color: #240e46;
+  font-family: Montserrat, sans-serif;
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
 @media (max-width: 1220px) {
   .payment-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  .payment-benefits-desktop {
+    display: none;
+  }
+
+  .payment-show-pix-information-mobile {
+    display: block;
+  }
+
+  .payment-benefits-mobile {
+    display: block;
   }
 }
 
 @media (max-width: 820px) {
   .payment-container {
     flex-direction: column-reverse;
+  }
+
+  .payment-form-options-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .payment-form-input-radio-label {
+    font-size: 14px;
+  }
+
+  .custom-radio {
+    width: 17px;
+    height: 17px;
+  }
+
+  .custom-radio span {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border-radius: 50%;
   }
 
   .payment-content {
@@ -292,6 +418,17 @@
 
   .payment-receive-report-title {
     text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .payment-form-input-radio {
+    height: 59px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .payment-form-input-radio > div.img-container {
+    max-width: 51px;
   }
 
   .payment-form-options-send-report-list {

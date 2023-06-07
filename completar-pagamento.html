@@ -109,7 +109,73 @@
       <div class="complete-payment-container">
         <!-- coluna-1 -->
         <div class="complete-payment-section-1">
-          <div class="complete-payment-pix">
+          <!-- box quando for cartão de crédito -->
+          <div
+            class="complete-payment-credit-card"
+            id="complete-payment-credit-card"
+          >
+            <span class="title">Informações de pagamento</span>
+            <form
+              class="complete-payment-credit-card-form"
+              id="credit-card-submit"
+            >
+              <div class="grid">
+                <div class="item card-number">
+                  <label for="" class="label">CARD NUMBER</label>
+                  <input type="text" class="input" id="credit-card" required />
+                </div>
+                <div class="item">
+                  <label for="" class="label">EXPIRE DATE</label>
+                  <input type="text" class="input" id="expire-date" required />
+                </div>
+                <div class="item">
+                  <label for="" class="label">CVV</label>
+                  <input type="text" class="input" id="cvv" required />
+                </div>
+                <div class="item">
+                  <label for="" class="label">CARDHOLDER NAME</label>
+                  <input type="text" class="input" />
+                </div>
+              </div>
+              <button
+                class="submit"
+                type="submit"
+                id="credit-card-submit-button"
+              >
+                Finalizar compra
+              </button>
+            </form>
+          </div>
+          <!-- box quando for pagamento boleto -->
+          <div class="complete-payment-ticket" id="complete-payment-ticket">
+            <span class="title">Boleto gerado</span>
+            <div class="ticket-img-1">
+              <img src="./assets/icons/boleto-blue.svg" alt="" />
+            </div>
+            <div class="actions-buttons">
+              <button class="copy">
+                <div class="flex">
+                  <img src="./assets/icons/min-boleto-white.svg" alt="" />
+                  Copiar código
+                </div>
+              </button>
+              <button class="print">
+                <div class="flex">
+                  <img src="./assets/icons/min-boleto-white.svg" alt="" />
+                  Imprimir / Salvar
+                </div>
+              </button>
+            </div>
+            <div class="lds-ring">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <span class="title title-bold">Aguardando pagamento</span>
+          </div>
+          <!-- box quando for pagamento pix -->
+          <div class="complete-payment-pix" id="complete-payment-pix">
             <div>
               <span class="title">Falta pouco ...</span>
               <p class="text-callback">
@@ -181,7 +247,7 @@
               </p>
             </div>
           </div>
-          <div class="complete-payment-time-pix">
+          <div class="complete-payment-time-pix" id="complete-payment-time-pix">
             <span class="title">PIX válido por:</span>
             <p class="text">
               <span>
@@ -328,18 +394,25 @@
         </p>
       </div>
     </footer>
+    <div class="modal-loading-container" id="modalLoading">
+      <div class="modal-loading-content">
+        <div class="lds-dual-ring"></div>
+        <p>Aguarde estamos carregando suas informações...</p>
+      </div>
+    </div>
   </body>
 </html>
 
 <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
 <script src="./js/menu-mobile.js"></script>
 <script src="./js/complete-payment-script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
 <script>
   new Accordion('.accordion-container');
 
   function scrollToSection(id) {
-    console.log('%c⧭', 'color: #ff0000', 'chamei');
     const section = document.getElementById(id);
 
     if (!section) {
@@ -351,4 +424,18 @@
       behavior: 'smooth',
     });
   }
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('#credit-card').mask('0000 0000 0000 0000');
+  });
+
+  $(document).ready(function () {
+    $('#expire-date').mask('00/00');
+  });
+
+  $(document).ready(function () {
+    $('#cvv').mask('000');
+  });
 </script>

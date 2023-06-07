@@ -58,3 +58,39 @@ function reset() {
 function formatTime(time) {
   return time < 10 ? '0' + time : time;
 }
+
+// regexp para pegar o param de pagamento que é passada na url
+const paymentQuery = window.location.href.split('?')[1].split('=')[1];
+const paymentBoxPix = document.getElementById('complete-payment-pix');
+const paymentBoxPixTime = document.getElementById('complete-payment-time-pix');
+const paymentBoxTicket = document.getElementById('complete-payment-ticket');
+const paymentBoxCredit = document.getElementById(
+  'complete-payment-credit-card'
+);
+
+if (paymentQuery === 'boleto') {
+  paymentBoxTicket.classList.add('complete-payment-visible');
+  paymentBoxPix.classList.add('complete-payment-none');
+  paymentBoxPixTime.classList.add('complete-payment-none');
+} else if (paymentQuery === 'creditCard') {
+  paymentBoxCredit.classList.add('complete-payment-visible');
+  paymentBoxPix.classList.add('complete-payment-none');
+  paymentBoxPixTime.classList.add('complete-payment-none');
+}
+
+if (paymentQuery === 'creditCard') {
+  const submitBuyCreditCard = document.getElementById('credit-card-submit');
+
+  function handleSubmitCreditCard(e) {
+    e.preventDefault();
+    const modalLoading = document.getElementById('modalLoading');
+    modalLoading.classList.add('visible');
+
+    setTimeout(() => {
+      modalLoading.classList.remove('visible');
+      window.location.pathname = 'sucesso-pagamento.html';
+    }, [3000]);
+  }
+
+  submitBuyCreditCard.addEventListener('submit', handleSubmitCreditCard);
+}
