@@ -124,12 +124,6 @@
 }
 
 @media (max-width: 820px) {
-  .about-section-container {
-    background-image: none;
-    margin-bottom: 0px;
-    position: absolute;
-    top: 0;
-  }
   .about-section-img-car-container {
     display: none;
   }
@@ -154,7 +148,7 @@
 
   .about-section-flex {
     flex-direction: column;
-    gap: 60px;
+    gap: 20px;
     width: initial;
     min-height: initial;
     padding-top: 0px;
@@ -189,10 +183,6 @@
 
   .about-section-img-car-container {
     margin-top: 0px;
-  }
-
-  .about-section-img-car-container-mobile {
-    margin-top: 40px;
   }
 
   .about-section-button-to-consult {

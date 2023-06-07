@@ -37,9 +37,9 @@
 }
 
 .footer-flex {
-  display: flex;
-  gap: 120px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-around;
 }
 
 .footer-item-links-container {
@@ -74,10 +74,10 @@
   gap: 60px;
 }
 
-@media (min-width: 821px) and (max-width: 1220px) {
+@media (max-width: 1320px) {
   .footer-flex {
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    grid-template-columns: repeat(2, auto);
+    gap: 120px;
   }
 }
 
@@ -99,5 +99,12 @@
 
   .footer-text-logo {
     text-align: start;
+  }
+}
+
+@media (max-width: 720px) {
+  .footer-flex {
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 }

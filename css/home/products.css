@@ -8,6 +8,11 @@
   margin-bottom: 9px;
 }
 
+.products-title-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .products-title-container > span.sub-title {
   text-transform: uppercase;
   color: #3d246a;
@@ -75,7 +80,8 @@
 }
 
 /* breakpoint specific for the carousel'styles (767px) */
-@media (max-width: 767px) {
+
+@media (max-width: 879px) {
   .products-title-container > h2.title {
     font-size: 19px;
   }
@@ -108,4 +114,9 @@
   .product-item {
     gap: 8px;
   }
+
+  /* .products-section {
+    padding-left: 0px;
+    padding-right: 0px;
+  } */
 }

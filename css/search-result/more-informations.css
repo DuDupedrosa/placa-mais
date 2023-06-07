@@ -179,6 +179,17 @@
   margin-top: 22px;
 }
 
+@media (min-width: 1221px) and (max-width: 1420px) {
+  .more-information-section-2-total-amount-container > span.value {
+    font-size: 36px;
+  }
+
+  .more-information-section-2-button-open > button {
+    font-size: 28px;
+    height: 72px;
+  }
+}
+
 @media (max-width: 1220px) {
   .more-information-flex {
     flex-direction: column;

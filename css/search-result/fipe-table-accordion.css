@@ -98,6 +98,7 @@
 
 .ac-panel-list > li > span.value-bold {
   font-weight: 600;
+  color: #f36e21;
 }
 
 .table-fipe-title {
@@ -127,11 +128,11 @@
   }
 
   .ac .ac-trigger::after {
-    content: url(../../assets/icons/accordion-icon-top-mobile.svg);
+    content: url(../../assets/icons/accordion-icon-bottom-mobile.svg);
   }
 
   .ac.is-active > .ac-header .ac-trigger::after {
-    content: url(../../assets/icons/accordion-icon-bottom-mobile.svg);
+    content: url(../../assets/icons/accordion-icon-top-mobile.svg);
   }
 
   .accordion-container {

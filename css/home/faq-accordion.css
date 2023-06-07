@@ -92,11 +92,11 @@
   }
 
   .ac .ac-trigger::after {
-    content: url(../../assets/icons/accordion-icon-top-mobile.svg);
+    content: url(../../assets/icons/accordion-icon-bottom-mobile.svg);
   }
 
   .ac.is-active > .ac-header .ac-trigger::after {
-    content: url(../../assets/icons/accordion-icon-bottom-mobile.svg);
+    content: url(../../assets/icons/accordion-icon-top-mobile.svg);
   }
 
   .accordion-container {
