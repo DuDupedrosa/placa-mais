@@ -16,9 +16,16 @@ function handleSubmit(e) {
 
   const modalLoading = document.getElementById('modalLoading');
   modalLoading.classList.add('visible');
+  const buttonsNone = document.querySelectorAll('body');
+  buttonsNone.forEach((body) => {
+    body.classList.add('events-none');
+  });
 
   setTimeout(() => {
     modalLoading.classList.remove('visible');
+    buttonsNone.forEach((body) => {
+      body.classList.remove('events-none');
+    });
     window.location.pathname = 'resultado.html';
   }, [3000]);
 }
@@ -33,8 +40,22 @@ submitConsultPlate.forEach((button) => {
 function handleSubmitContact(e) {
   e.preventDefault();
 
-  const modalSuccess = document.getElementById('modalSuccess');
-  modalSuccess.classList.add('visible');
+  const modalLoading = document.getElementById('modalLoading');
+  modalLoading.classList.add('visible');
+  const buttonsNone = document.querySelectorAll('body');
+  buttonsNone.forEach((body) => {
+    body.classList.add('events-none');
+  });
+
+  setTimeout(() => {
+    modalLoading.classList.remove('visible');
+    buttonsNone.forEach((body) => {
+      body.classList.remove('events-none');
+    });
+    const modalSuccess = document.getElementById('modalSuccess');
+    modalSuccess.classList.add('visible');
+  }, [3000]);
+
   // controle de erro futuro
   // const modalError = document.getElementById('modalError');
   // modalError.classList.add('visible');

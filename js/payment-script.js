@@ -3,6 +3,10 @@ function handleSubmitPayment(e) {
   const appBaseUrl = window.location.protocol + '//' + window.location.host;
   const modalLoading = document.getElementById('modalLoading');
   modalLoading.classList.add('visible');
+  const buttonsNone = document.querySelectorAll('body');
+  buttonsNone.forEach((body) => {
+    body.classList.add('events-none');
+  });
 
   // pegando os valores do form
   const paymentOptionPix = document.getElementById('option-pix');
@@ -12,6 +16,9 @@ function handleSubmitPayment(e) {
   // lógica após feita a request
   setTimeout(() => {
     modalLoading.classList.remove('visible');
+    buttonsNone.forEach((body) => {
+      body.classList.remove('events-none');
+    });
 
     if (paymentOptionPix.checked) {
       window.location.href =

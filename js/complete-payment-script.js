@@ -85,9 +85,16 @@ if (paymentQuery === 'creditCard') {
     e.preventDefault();
     const modalLoading = document.getElementById('modalLoading');
     modalLoading.classList.add('visible');
+    const buttonsNone = document.querySelectorAll('body');
+    buttonsNone.forEach((body) => {
+      body.classList.add('events-none');
+    });
 
     setTimeout(() => {
       modalLoading.classList.remove('visible');
+      buttonsNone.forEach((body) => {
+        body.classList.remove('events-none');
+      });
       window.location.pathname = 'sucesso-pagamento.html';
     }, [3000]);
   }

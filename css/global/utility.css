@@ -31,6 +31,10 @@
   display: grid;
 }
 
+.events-none {
+  pointer-events: none;
+}
+
 @font-face {
   font-family: Segoe UI;
   src: url('../../fonts/Segoe UI.ttf'), url('../../fonts/Segoe UI Bold.ttf');

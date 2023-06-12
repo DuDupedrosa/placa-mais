@@ -7,7 +7,7 @@
   top: 0;
   background-color: rgba(0, 0, 0, 0.342);
   pointer-events: none;
-  z-index: 9999999;
+  z-index: 99999999999999;
   display: none;
 }
 
@@ -20,6 +20,7 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 12px;
+  pointer-events: none !important;
 }
 
 .modal-loading-content p {
