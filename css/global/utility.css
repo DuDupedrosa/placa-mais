@@ -19,6 +19,7 @@
   border: none;
   background-color: #f99d1b;
   cursor: pointer;
+  z-index: 999999999999;
 }
 
 #scrollTopBtn > img {
