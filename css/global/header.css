@@ -127,13 +127,14 @@
     right: 0;
     display: block;
     background-color: #240e46;
-    padding: 20px;
+    padding: 20px 50px 20px 50px;
     z-index: 99999;
     top: 75px;
     height: 1000vh;
-    border-radius: 4px 0 0 4px;
+    border-radius: 0px;
     animation: show-menu-mobile 0.4s forwards;
     width: 40%;
+    border-left: 2px solid #ffffff;
   }
 
   .header-nav-list-mobile li > span {
@@ -185,5 +186,11 @@
 @media (max-width: 600px) {
   .header-nav-list-button-consult-mobile > a {
     font-size: 12px;
+  }
+
+  .header-nav-list-mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50%;
   }
 }
